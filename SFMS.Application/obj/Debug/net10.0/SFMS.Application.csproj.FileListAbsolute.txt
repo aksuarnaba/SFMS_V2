@@ -1,0 +1,12 @@
+C:\Project\01. PRIME\SFMS\SFMS.Application\bin\Debug\net10.0\SFMS.Application.deps.json
+C:\Project\01. PRIME\SFMS\SFMS.Application\bin\Debug\net10.0\SFMS.Application.dll
+C:\Project\01. PRIME\SFMS\SFMS.Application\bin\Debug\net10.0\SFMS.Application.pdb
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.AssemblyInfoInputs.cache
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.AssemblyInfo.cs
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.csproj.CoreCompileInputs.cache
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.dll
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\refint\SFMS.Application.dll
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.Application.pdb
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\ref\SFMS.Application.dll
+C:\Project\01. PRIME\SFMS\SFMS.Application\obj\Debug\net10.0\SFMS.App.F0E3DB48.Up2Date

@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="SFMS.Api/SFMS.Api.csproj" />
+    <Project Path="SFMS.Application/SFMS.Application.csproj" />
+    <Project Path="SFMS.Domain/SFMS.Domain.csproj" />
+    <Project Path="SFMS.Infastructure/SFMS.Infrastructure.csproj" />
+  </Folder>
+</Solution>

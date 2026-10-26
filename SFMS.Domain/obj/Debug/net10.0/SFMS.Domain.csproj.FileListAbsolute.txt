@@ -1,0 +1,12 @@
+C:\Project\01. PRIME\SFMS\SFMS.Domain\bin\Debug\net10.0\SFMS.Domain.deps.json
+C:\Project\01. PRIME\SFMS\SFMS.Domain\bin\Debug\net10.0\SFMS.Domain.dll
+C:\Project\01. PRIME\SFMS\SFMS.Domain\bin\Debug\net10.0\SFMS.Domain.pdb
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.AssemblyInfoInputs.cache
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.AssemblyInfo.cs
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.csproj.CoreCompileInputs.cache
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.dll
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\refint\SFMS.Domain.dll
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.pdb
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\ref\SFMS.Domain.dll
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Dom.77A288B2.Up2Date
