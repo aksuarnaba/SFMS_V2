@@ -37,8 +37,8 @@
               "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\SFMS.Application.csproj": {
                 "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\SFMS.Application.csproj"
               },
-              "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\SFMS.Infrastructure.csproj": {
-                "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\SFMS.Infrastructure.csproj"
+              "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\SFMS.Infrastructure.csproj": {
+                "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\SFMS.Infrastructure.csproj"
               }
             }
           }
@@ -60,6 +60,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.13, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.12, )"
@@ -555,6 +563,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.14, )"
@@ -1196,14 +1212,14 @@
         }
       }
     },
-    "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\SFMS.Infrastructure.csproj": {
+    "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\SFMS.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\SFMS.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\SFMS.Infrastructure.csproj",
         "projectName": "SFMS.Infrastructure",
-        "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\SFMS.Infrastructure.csproj",
+        "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\SFMS.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\aron.suarnaba\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infastructure\\obj\\",
+        "outputPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1252,6 +1268,10 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

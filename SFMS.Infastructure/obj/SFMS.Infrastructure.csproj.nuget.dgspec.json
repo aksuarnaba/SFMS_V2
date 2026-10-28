@@ -57,6 +57,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.14, )"
@@ -730,9 +738,6 @@
             "projectReferences": {
               "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\SFMS.Application.csproj": {
                 "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\SFMS.Application.csproj"
-              },
-              "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\SFMS.Domain.csproj": {
-                "projectPath": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\SFMS.Domain.csproj"
               }
             }
           }
@@ -754,6 +759,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

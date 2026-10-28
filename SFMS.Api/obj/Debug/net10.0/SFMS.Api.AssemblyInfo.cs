@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8412f88a-7b01-4ad9-b777-bfd26a34e1f4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SFMS.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05ef9ac325d37b46b64d89f2cf40a53fcbea45cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("SFMS.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SFMS.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

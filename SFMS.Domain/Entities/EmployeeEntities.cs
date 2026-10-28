@@ -10,10 +10,12 @@ namespace SFMS.Domain.Entities
     {
         public string Site { get; set; } = string.Empty;
         public string Emp_num { get; set; } = string.Empty;
-        public string Dept { get; set; } = string.Empty;
-        public string? Section { get; set; }
-        public string Position { get; set; } = string.Empty;
+        public string? Name { get; set; }
+        public string? Dept { get; set; }
+        public string Section { get; set; } = string.Empty;
+        public string? Position { get; set; }
         public string PasswordHash { get; set; } = string.Empty;
+        public bool IsActive { get; set; } = true;
         public RoleEnums Role { get; set; } = RoleEnums.User;
         public AccessEnums Access { get; set; } = AccessEnums.Tagging;
         public RightsEnums Rights { get; set; } = RightsEnums.View;
