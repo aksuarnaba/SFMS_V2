@@ -1,8 +1,16 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="SFMS.Api/SFMS.Api.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
     <Project Path="SFMS.Application/SFMS.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Domain/">
     <Project Path="SFMS.Domain/SFMS.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
     <Project Path="SFMS.Infrastructure/SFMS.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="Presentation/SFMS.Api/SFMS.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Presentation/SFMS.Tablet/" />
 </Solution>

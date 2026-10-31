@@ -11,12 +11,12 @@ namespace SFMS.Infrastructure.Repositories
         private readonly PalletTaggingDbContext _context;
         public UnitOfWork(
             PalletTaggingDbContext context,
-            IEmployeeRepository employeeRepository)
+            IUserRepository userRepository)
         {
             _context = context;
-            Employees = employeeRepository;
+            Users = userRepository;
         }
-        public IEmployeeRepository Employees { get; }
+        public IUserRepository Users { get; }
 
         public async Task<int> SaveChangesAsync(CancellationToken ct = default)
         {

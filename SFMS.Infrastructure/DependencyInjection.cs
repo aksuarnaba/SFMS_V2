@@ -5,7 +5,6 @@ using SFMS.Application.Common.Interfaces;
 using SFMS.Infrastructure.Data;
 using SFMS.Infrastructure.Repositories;
 using SFMS.Infrastructure.Security;
-using SFMS.Infrastructure.Service;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,14 +21,22 @@ namespace SFMS.Infrastructure
 
             services.AddDbContext<PalletTaggingDbContext>(options => options.UseSqlServer(connectionString));
 
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
-            services.AddScoped<IPasswordService, PasswordService>();
+            services.AddScoped<IPasswordRepository, PasswordRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
             return services;
             
+        }
+
+        public static IServiceCollection AddApplication(this IServiceCollection services)
+        {
+            return services;
         }
     }
 }

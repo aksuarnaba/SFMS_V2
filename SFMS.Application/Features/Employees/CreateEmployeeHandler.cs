@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using SFMS.Application.Common.Interfaces;
+﻿using SFMS.Application.Common.Interfaces;
 using SFMS.Application.Common.Mappings;
 using SFMS.Application.DTOs.Employees;
 using SFMS.Domain.Entities;
@@ -12,20 +11,18 @@ namespace SFMS.Application.Features.Employees
     public class CreateEmployeeHandler
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IPasswordRepository _passwordRepository;
 
-        public CreateEmployeeHandler(IUnitOfWork unitOfWork, IMapper mapper, IPasswordRepository passwordRepository)
+        public CreateEmployeeHandler(IUnitOfWork unitOfWork, IPasswordRepository passwordRepository)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _passwordRepository = passwordRepository;
         }
 
-        public async Task<int> Handle(CreateEmployeeDto request)
+        public async Task<int> Handle(UserDtoRequest request)
         {
             var existing =
-                await _unitOfWork.Employees
+                await _unitOfWork.Users
                 .GetByEmpNumAsync(request.Site, request.EmpNum);
 
             if (existing != null)
@@ -33,11 +30,11 @@ namespace SFMS.Application.Features.Employees
                 throw new Exception("Employee already exist!");
             }
 
-            var employee = _mapper.Map<EmployeeEntities>(request);
+            var employee = EmployeeMapper.MapToEntity(request);
 
             employee.PasswordHash = _passwordRepository.HashPassword(employee, request.Password);
 
-            await _unitOfWork.Employees.AddAsync(employee);
+            await _unitOfWork.Users.AddAsync(employee);
             await _unitOfWork.SaveChangesAsync();
 
             return employee.Id;

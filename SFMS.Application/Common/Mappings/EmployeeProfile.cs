@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using SFMS.Application.DTOs.Employees;
+﻿using SFMS.Application.DTOs.Employees;
 using SFMS.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,17 +6,21 @@ using System.Text;
 
 namespace SFMS.Application.Common.Mappings
 {
-    public class EmployeeProfile : Profile
+    public static class EmployeeMapper
     {
-        public EmployeeProfile()
+        public static UserEntities MapToEntity(UserDtoRequest request)
         {
-            CreateMap<CreateEmployeeDto, EmployeeEntities>()
-                .ForMember(
-                dest => dest.Emp_num,
-                opt => opt.MapFrom(src => src.EmpNum))
-                .ForMember(
-                dest => dest.PasswordHash,
-                opt => opt.Ignore());
+            return new UserEntities
+            {
+                Site = request.Site,
+                Emp_num = request.EmpNum,
+                Name = request.Name,
+                Dept = request.Dept,
+                Section = request.Section,
+                Position = request.Position,
+                PasswordHash = string.Empty,
+                Signature = string.Empty
+            };
         }
     }
 }

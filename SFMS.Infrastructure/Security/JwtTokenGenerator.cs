@@ -19,7 +19,7 @@ namespace SFMS.Infrastructure.Security
             _configuration = configuration;
         }
 
-        public string GenerateToken(EmployeeEntities employee)
+        public string GenerateToken(UserEntities employee)
         {
             var key =
                 _configuration["JwtSettings:Key"]

@@ -6,7 +6,7 @@ namespace SFMS.Application.Common.Interfaces
 {
     public interface IUnitOfWork
     {
-        IEmployeeRepository Employees { get; }
+        IUserRepository Users { get; }
         Task<int> SaveChangesAsync(CancellationToken ct = default);
     }
 }

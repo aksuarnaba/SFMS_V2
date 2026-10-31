@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SFMS.Application.Common.Interfaces;
+using SFMS.Domain.Common;
 using SFMS.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,13 @@ namespace SFMS.Infrastructure.Data
     {
         public PalletTaggingDbContext(DbContextOptions<PalletTaggingDbContext> options) : base(options) { }
 
-        public DbSet<EmployeeEntities> Employees => Set<EmployeeEntities>();
+        public DbSet<UserEntities> Users => Set<UserEntities>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Ignore<BaseEvent>();
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PalletTaggingDbContext).Assembly);
         }
     }

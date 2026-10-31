@@ -1,0 +1,37 @@
+@SFMS_HostAddress = http://localhost:5241
+@token = ""
+
+### Login
+# @name loginRequest
+POST {{SFMS_HostAddress}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "site": "PI-SP",
+  "empNum": "PPC2201",
+  "password": "Password123"
+}
+
+###
+
+@token = {{loginRequest.response.body.$.token}}
+
+### Get users
+GET {{SFMS_HostAddress}}/api/v1/users?page=1&pagedSize=10&search=PPC
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### Create user
+POST {{SFMS_HostAddress}}/api/v1/users
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "site": "PI-SP",
+  "empNum": "PPC2201",
+  "name": "John Doe",
+  "dept": "Information Technology",
+  "section": "IT Support",
+  "position": "System Analyst (L1)",
+  "password": "Password123"
+}

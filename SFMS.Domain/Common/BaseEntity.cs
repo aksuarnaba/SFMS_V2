@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SFMS.Domain.Common
@@ -10,6 +11,7 @@ namespace SFMS.Domain.Common
 
         private readonly List<BaseEvent> _domainEvents = [];
 
+        [NotMapped]
         public IReadOnlyCollection<BaseEvent> DomainEvents => _domainEvents.AsReadOnly();
 
         public void AddDomainEvent(BaseEvent eventItem) => _domainEvents.Add(eventItem);

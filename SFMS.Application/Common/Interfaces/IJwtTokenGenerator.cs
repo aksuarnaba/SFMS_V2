@@ -7,6 +7,6 @@ namespace SFMS.Application.Common.Interfaces
 {
     public interface IJwtTokenGenerator
     {
-        string GenerateToken(EmployeeEntities employee);
+        string GenerateToken(UserEntities employee);
     }
 }

@@ -7,7 +7,7 @@ namespace SFMS.Application.Common.Interfaces
 {
     public interface IPasswordRepository
     {
-        string HashPassword(EmployeeEntities employee, string password);
-        bool VerifyPassword(EmployeeEntities employee, string hashedPassword, string password);
+        string HashPassword(UserEntities employee, string password);
+        bool VerifyPassword(UserEntities employee, string hashedPassword, string password);
     }
 }
