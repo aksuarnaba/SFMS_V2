@@ -171,7 +171,6 @@ C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\staticwebassets.build.jso
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\staticwebassets.development.json
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\staticwebassets.build.endpoints.json
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\swae.build.ex.cache
-C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\staticwebassets.upToDateCheck.txt
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\SFMS.Api.csproj.Up2Date
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\SFMS.Api.dll
 C:\Project\01. PRIME\SFMS\SFMS.Api\obj\Release\net10.0\refint\SFMS.Api.dll
