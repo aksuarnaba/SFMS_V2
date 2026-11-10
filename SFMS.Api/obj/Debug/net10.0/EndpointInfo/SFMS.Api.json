@@ -1,0 +1,16 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "SFMS.Api | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:7280"
+    },
+    {
+      "url": "http://localhost:5062"
+    }
+  ],
+  "paths": { }
+}
