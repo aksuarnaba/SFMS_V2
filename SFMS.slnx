@@ -12,4 +12,5 @@
   <Folder Name="/src/Infrastructure/">
     <Project Path="SFMS.Infrastructure/SFMS.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/Presentation/" />
 </Solution>
