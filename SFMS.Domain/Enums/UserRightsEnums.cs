@@ -6,8 +6,8 @@ namespace SFMS.Domain.Enums
 {
     public enum UserRightsEnums
     {
-        All,
-        Edit,
-        View
+        All = 1,
+        Edit = 2,
+        View = 3
     }
 }

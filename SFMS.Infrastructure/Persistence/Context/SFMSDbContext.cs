@@ -6,13 +6,8 @@ using System.Text;
 
 namespace SFMS.Infrastructure.Persistence.Context
 {
-    public class SFMSDbContext : DbContext
+    public class SFMSDbContext(DbContextOptions<SFMSDbContext> options) : DbContext(options)
     {
-        public SFMSDbContext(DbContextOptions<SFMSDbContext> options) : base(options)
-        {
-
-        }
-
         public DbSet<User> User => Set<User>();
         public DbSet<Department> Departments => Set<Department>();
         public DbSet<Section> Sections => Set<Section>();

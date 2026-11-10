@@ -6,7 +6,7 @@ namespace SFMS.Domain.Enums
 {
     public enum UserAccessEnums
     {
-        Tagging,
-        Report
+        Tagging = 1,
+        Report = 2
     }
 }

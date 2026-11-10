@@ -1,1 +1,61 @@
-[]
+[
+  {
+    "ContainingType": "SFMS.Api.Endpoints.AuthenticationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthenticationEndpoints\u003Eb__0_0",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SFMS.Api.Contracts.Authentication.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "Login",
+    "Summary": "Authenticate an SFMS user."
+  },
+  {
+    "ContainingType": "SFMS.Api.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_0",
+    "RelativePath": "api/users/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ],
+    "EndpointName": "GetUsers",
+    "Summary": "Get paginated users."
+  }
+]

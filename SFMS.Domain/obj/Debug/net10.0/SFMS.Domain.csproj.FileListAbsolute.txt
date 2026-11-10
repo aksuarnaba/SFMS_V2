@@ -10,3 +10,4 @@ C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\refint\SFMS.Domain.dll
 C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.pdb
 C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\ref\SFMS.Domain.dll
 C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Dom.77A288B2.Up2Date
+C:\Project\01. PRIME\SFMS\SFMS.Domain\obj\Debug\net10.0\SFMS.Domain.sourcelink.json

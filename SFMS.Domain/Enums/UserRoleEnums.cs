@@ -6,8 +6,8 @@ namespace SFMS.Domain.Enums
 {
     public enum UserRoleEnums
     {
-        Superadmin,
-        Admin,
-        User
+        Superadmin = 1,
+        Admin = 2,
+        User = 3
     }
 }

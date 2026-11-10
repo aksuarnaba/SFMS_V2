@@ -1,6 +1,26 @@
 @SFMS.Api_HostAddress = http://localhost:5062
 
-GET {{SFMS.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Login Request
+# @name loginRequest
+POST {{SFMS.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "site": 1,
+  "employeeNumber": "SA",
+  "password": "SA"
+}
 
 ###
+
+@response_handler = {%
+    client.global.set("auth_token", response.body.accessToken);
+    console.log("Token captured: " + response.body.accessToken);
+%}
+
+###
+
+### 2. Get Users Request
+GET {{SFMS.Api_HostAddress}}/api/users?pageNumber=1&pageSize=20
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYzFkMGNmOS1jNWFiLTQwNmYtYWZmNi03ZmI1NWIxZmRlMDAiLCJqdGkiOiIyNDc5ZDA2NC00MjMwLTQwNzItYjk2Ny1mNmZmZThmYmYwMTEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImRjMWQwY2Y5LWM1YWItNDA2Zi1hZmY2LTdmYjU1YjFmZGUwMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTQSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyYWRtaW4iLCJzaXRlIjoiUGlTcCIsImFjY2VzcyI6IlRhZ2dpbmciLCJyaWdodHMiOiJBbGwiLCJleHAiOjE3OTQzMDIxNjAsImlzcyI6IlNGTVNfSXNzdWVyIiwiYXVkIjoiU0ZNU19BdWRpZW5jZSJ9.ZLx2Xus9StCgwP7Zuwga-SvRXL2f7xG_Bz3IdWD6rbQ
+Accept: application/json

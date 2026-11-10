@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Features\Authentication\DTOs\" />
+    <Folder Include="Features\Users\Queries\GetUsersById\" />
   </ItemGroup>
 
   <ItemGroup>

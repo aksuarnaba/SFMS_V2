@@ -17,3 +17,4 @@ C:\Project\01. PRIME\SFMS\SFMS.Infrastructure\obj\Debug\net10.0\refint\SFMS.Infr
 C:\Project\01. PRIME\SFMS\SFMS.Infrastructure\obj\Debug\net10.0\SFMS.Infrastructure.pdb
 C:\Project\01. PRIME\SFMS\SFMS.Infrastructure\obj\Debug\net10.0\SFMS.Infrastructure.genruntimeconfig.cache
 C:\Project\01. PRIME\SFMS\SFMS.Infrastructure\obj\Debug\net10.0\ref\SFMS.Infrastructure.dll
+C:\Project\01. PRIME\SFMS\SFMS.Infrastructure\obj\Debug\net10.0\SFMS.Infrastructure.sourcelink.json
