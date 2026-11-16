@@ -2,189 +2,443 @@
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
+using SFMS.Application.Common.Interfaces.Security;
 using SFMS.Domain.Entities;
 using SFMS.Domain.Enums;
 using SFMS.Infrastructure.Persistence.Context;
 
-public static class ApplicationDbContextSeeder
+public static class SFMSDbContextSeeder
 {
-    public static async Task SeedAsync(SFMSDbContext context)
+    public static async Task SeedAsync(
+        SFMSDbContext context,
+        IPasswordHasher passwordHasher,
+        string? initialAdminPassword,
+        CancellationToken cancellationToken = default)
     {
-        try
-        {
-            // 1. Ensure migrations / database are applied
-            await context.Database.MigrateAsync();
-            Console.WriteLine("✓ Database migrations applied successfully.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"✗ Error applying migrations: {ex.Message}");
-            throw;
-        }
+        ArgumentNullException.ThrowIfNull(context);
+        ArgumentNullException.ThrowIfNull(passwordHasher);
 
-        // 2. Seed Departments
-        if (!await context.Departments.AnyAsync())
+        await SeedDepartmentsAsync(
+            context,
+            cancellationToken);
+
+        await SeedSectionsAsync(
+            context,
+            cancellationToken);
+
+        await SeedPositionsAsync(
+            context,
+            cancellationToken);
+
+        await SeedInitialAdministratorAsync(
+            context,
+            passwordHasher,
+            initialAdminPassword,
+            cancellationToken);
+    }
+
+    private static async Task SeedDepartmentsAsync(
+        SFMSDbContext context,
+        CancellationToken cancellationToken)
+    {
+        var departments = new[]
         {
-            var departments = new List<Department>
+        new Department(
+            "MKT",
+            "MARKETING"),
+
+        new Department(
+            "LOG",
+            "LOGISTIC"),
+
+        new Department(
+            "PROD",
+            "PRODUCTION"),
+
+        new Department(
+            "IT",
+            "INFORMATION TECHNOLOGY"),
+
+        new Department(
+            "TSQA",
+            "TECHNICAL SERVICES AND QUALITY ASSURANCE")
+    };
+
+        foreach (var department in departments)
+        {
+            var exists = await context.Departments
+                .AnyAsync(
+                    existing =>
+                        existing.Code == department.Code,
+                    cancellationToken);
+
+            if (!exists)
             {
-                new() { Name = "MARKETING" },
-                new() { Name = "SUB CON" },
-                new() { Name = "LOGISTIC" },
-                new() { Name = "PRODUCTION" },
-                new() { Name = "INFORMATION TECHNOLOGY" },
-                new() { Name = "TSQA" }
-            };
-
-            await context.Departments.AddRangeAsync(departments);
-            await context.SaveChangesAsync();
-            Console.WriteLine("✓ Departments seeded successfully.");
-        }
-        else
-        {
-            Console.WriteLine("ℹ Departments already exist, skipping seed.");
-        }
-
-        // 3. Seed Sections
-        if (!await context.Sections.AnyAsync())
-        {
-            var sections = new List<Section>
-            {
-                new() { Name = "MARKETING" },
-                new() { Name = "SUB CON" },
-                new() { Name = "ERECTING" },
-                new() { Name = "DIGITAL PRESS" },
-                new() { Name = "DIE CUTTING" },
-                new() { Name = "COATING" },
-                new() { Name = "LAMINATION" },
-                new() { Name = "GLUING" },
-                new() { Name = "INFORMATION TECHNOLOGY - SDG" },
-                new() { Name = "MACHINE STRIPPING" },
-                new() { Name = "FINISHING" },
-                new() { Name = "PRODUCTION OFFICE" },
-                new() { Name = "STRIPPING" },
-                new() { Name = "OFFSET" },
-                new() { Name = "INSPECTION MACHINE" },
-                new() { Name = "CUTTING" },
-                new() { Name = "QA" },
-                new() { Name = "MANUAL FINISHING" },
-                new() { Name = "PLANNING OFFICE" }
-            };
-
-            await context.Sections.AddRangeAsync(sections);
-            await context.SaveChangesAsync();
-            Console.WriteLine("✓ Sections seeded successfully.");
-        }
-        else
-        {
-            Console.WriteLine("ℹ Sections already exist, skipping seed.");
-        }
-
-        // 4. Seed Positions
-        if (!await context.Positions.AnyAsync())
-        {
-            var positions = new List<Position>
-            {
-                new() { Name = "MARKETING" },
-                new() { Name = "LINE LEADER" },
-                new() { Name = "FEEDER" },
-                new() { Name = "SYS. ANALYST PROG." },
-                new() { Name = "ADMIN" },
-                new() { Name = "SUPERVISOR" },
-                new() { Name = "ASSISTANT SUPERVISOR" },
-                new() { Name = "PICKER" },
-                new() { Name = "SORTER" },
-                new() { Name = "INSPECTOR" },
-                new() { Name = "MATERIAL PLANNER" },
-                new() { Name = "ASSISTENT OPERATOR" },
-                new() { Name = "PACKER" },
-                new() { Name = "SUPERINTENDENT" },
-                new() { Name = "HELPER" },
-                new() { Name = "OPERATOR" }
-            };
-
-            await context.Positions.AddRangeAsync(positions);
-            await context.SaveChangesAsync();
-            Console.WriteLine("✓ Positions seeded successfully.");
-        }
-        else
-        {
-            Console.WriteLine("ℹ Positions already exist, skipping seed.");
-        }
-
-        // 5. Seed Default User (matching your login test data)
-        // CHANGED context.User to context.Users below:
-        if (!await context.User.AnyAsync())
-        {
-            try
-            {
-                var passwordHasher = new PasswordHasher<User>();
-
-                var defaultDept = await context.Departments.FirstAsync();
-                var defaultSec = await context.Sections.FirstAsync();
-                var defaultPos = await context.Positions.FirstAsync();
-
-                var defaultPasswordHash = passwordHasher.HashPassword(null!, "pass123");
-
-                // Fetch relevant lookup entities to satisfy foreign key IDs safely
-                var department = await context.Departments.FirstAsync(d => d.Name == "INFORMATION TECHNOLOGY");
-                var section = await context.Sections.FirstAsync(s => s.Name == "INFORMATION TECHNOLOGY - SDG");
-                var position = await context.Positions.FirstAsync(p => p.Name == "SYS. ANALYST PROG.");
-
-                var hashedPassword = passwordHasher.HashPassword(null!, "SA");
-
-                var usersToSeed = new List<User>();
-
-                // Generate 19 sample users dynamically
-                for (int i = 1; i <= 19; i++)
-                {
-                    usersToSeed.Add(new User
-                    {
-                        Site = SiteEnums.PiSp,
-                        EmployeeNumber = $"PPC-{i:D3}",
-                        Name = $"Employee {i}",
-                        DepartmentId = defaultDept.Id,
-                        SectionId = defaultSec.Id,
-                        PositionId = defaultPos.Id,
-                        PasswordHash = defaultPasswordHash,
-                        Role = UserRoleEnums.User,
-                        IsActive = true,
-                        Access = UserAccessEnums.Tagging,
-                        Rights = UserRightsEnums.View,
-                        Signature = null,
-                    });
-                }
-
-                var defaultUser = new User
-                {
-                    Site = SiteEnums.PiSp,
-                    EmployeeNumber = "SA",
-                    Name = "System Administrator",
-                    DepartmentId = department.Id,
-                    SectionId = section.Id,
-                    PositionId = position.Id,
-                    PasswordHash = hashedPassword,
-                    Role = UserRoleEnums.Superadmin,
-                    IsActive = true,
-                    Access = UserAccessEnums.Tagging,
-                    Rights = UserRightsEnums.All,
-                    Signature = null
-                };
-                usersToSeed.Add(defaultUser);
-
-                // CHANGED context.User to context.Users below:
-                await context.User.AddRangeAsync(usersToSeed);
-                await context.SaveChangesAsync();
-                Console.WriteLine("✓ Default user 'SA' seeded successfully.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"✗ Error seeding default user: {ex.Message}");
-                throw;
+                await context.Departments.AddAsync(
+                    department,
+                    cancellationToken);
             }
         }
-        else
+
+        await context.SaveChangesAsync(
+            cancellationToken);
+    }
+
+    private static async Task SeedSectionsAsync(
+        SFMSDbContext context,
+        CancellationToken cancellationToken)
+    {
+        var marketingDepartmentId =
+            await GetDepartmentIdAsync(
+                context,
+                "MKT",
+                cancellationToken);
+
+        var logisticsDepartmentId =
+            await GetDepartmentIdAsync(
+                context,
+                "LOG",
+                cancellationToken);
+
+        var productionDepartmentId =
+            await GetDepartmentIdAsync(
+                context,
+                "PROD",
+                cancellationToken);
+
+        var informationTechnologyDepartmentId =
+            await GetDepartmentIdAsync(
+                context,
+                "IT",
+                cancellationToken);
+
+        var tsqaDepartmentId =
+            await GetDepartmentIdAsync(
+                context,
+                "TSQA",
+                cancellationToken);
+
+        var sections = new[]
         {
-            Console.WriteLine("ℹ Users already exist, skipping seed.");
+
+        new Section(
+            "SUB",
+            "SUB CON",
+            productionDepartmentId),
+
+        new Section(
+            "ERE",
+            "ERECTING",
+            productionDepartmentId),
+
+        new Section(
+            "DGP",
+            "DIGITAL PRESS",
+            productionDepartmentId),
+
+        new Section(
+            "DI",
+            "DIE CUTTING",
+            productionDepartmentId),
+
+        new Section(
+            "COA",
+            "COATING",
+            productionDepartmentId),
+
+        new Section(
+            "LAM",
+            "LAMINATION",
+            productionDepartmentId),
+
+        new Section(
+            "GLU",
+            "GLUING",
+            productionDepartmentId),
+
+        new Section(
+            "SDG",
+            "INFORMATION TECHNOLOGY - SDG",
+            informationTechnologyDepartmentId),
+
+        new Section(
+            "MSTR",
+            "MACHINE STRIPPING",
+            productionDepartmentId),
+
+        new Section(
+            "FIN",
+            "FINISHING",
+            productionDepartmentId),
+
+        new Section(
+            "PROD",
+            "PRODUCTION OFFICE",
+            productionDepartmentId),
+
+        new Section(
+            "STR",
+            "STRIPPING",
+            productionDepartmentId),
+
+        new Section(
+            "OFF",
+            "OFFSET",
+            productionDepartmentId),
+
+        new Section(
+            "QA",
+            "INSPECTION MACHINE",
+            tsqaDepartmentId),
+
+        new Section(
+            "CUT",
+            "CUTTING",
+            productionDepartmentId),
+
+        new Section(
+            "MF",
+            "MANUAL FINISHING",
+            productionDepartmentId),
+
+        new Section(
+            "PLA",
+            "PLANNING OFFICE",
+            productionDepartmentId),
+
+        new Section(
+            "LOGI",
+            "LOGISTICS",
+            logisticsDepartmentId)
+    };
+
+        foreach (var section in sections)
+        {
+            var exists = await context.Sections
+                .AnyAsync(
+                    existing =>
+                        existing.DepartmentId ==
+                            section.DepartmentId &&
+                        existing.Code == section.Code,
+                    cancellationToken);
+
+            if (!exists)
+            {
+                await context.Sections.AddAsync(
+                    section,
+                    cancellationToken);
+            }
         }
+
+        await context.SaveChangesAsync(
+            cancellationToken);
+    }
+
+    private static async Task SeedPositionsAsync(
+        SFMSDbContext context,
+        CancellationToken cancellationToken)
+    {
+        var positions = new[]
+        {
+        new Position(
+            "MARKETING",
+            "MARKETING"),
+
+        new Position(
+            "LL",
+            "LINE LEADER"),
+
+        new Position(
+            "FEED",
+            "FEEDER"),
+
+        new Position(
+            "SYSPROG",
+            "SYS. ANALYST PROG."),
+
+        new Position(
+            "ADMIN",
+            "ADMIN"),
+
+        new Position(
+            "SV",
+            "SUPERVISOR"),
+
+        new Position(
+            "ASV",
+            "ASSISTANT SUPERVISOR"),
+
+        new Position(
+            "PIC",
+            "PICKER"),
+
+        new Position(
+            "SRT",
+            "SORTER"),
+
+        new Position(
+            "INSP",
+            "INSPECTOR"),
+
+        new Position(
+            "MTPL",
+            "MATERIAL PLANNER"),
+
+        new Position(
+            "AOP",
+            "ASSISTANT OPERATOR"),
+
+        new Position(
+            "PACK",
+            "PACKER"),
+
+        new Position(
+            "SI",
+            "SUPERINTENDENT"),
+
+        new Position(
+            "HELP",
+            "HELPER"),
+
+        new Position(
+            "OPE",
+            "OPERATOR")
+    };
+
+        foreach (var position in positions)
+        {
+            var exists = await context.Positions
+                .AnyAsync(
+                    existing =>
+                        existing.Code == position.Code,
+                    cancellationToken);
+
+            if (!exists)
+            {
+                await context.Positions.AddAsync(
+                    position,
+                    cancellationToken);
+            }
+        }
+
+        await context.SaveChangesAsync(
+            cancellationToken);
+    }
+
+    private static async Task SeedInitialAdministratorAsync(
+        SFMSDbContext context,
+        IPasswordHasher passwordHasher,
+        string? initialAdminPassword,
+        CancellationToken cancellationToken)
+    {
+        var administratorExists = await context.Users
+            .AnyAsync(
+                user =>
+                    user.Site == SiteEnums.PiSp &&
+                    user.EmployeeNumber == "SA",
+                cancellationToken);
+
+        if (administratorExists)
+        {
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(initialAdminPassword))
+        {
+            throw new InvalidOperationException(
+                "The initial SFMS administrator does not exist, " +
+                "but no InitialAdmin password was configured.");
+        }
+
+        var departmentId = await GetDepartmentIdAsync(
+            context,
+            "IT",
+            cancellationToken);
+
+        var sectionId = await GetSectionIdAsync(
+            context,
+            departmentId,
+            "SDG",
+            cancellationToken);
+
+        var positionId = await GetPositionIdAsync(
+            context,
+            "SYSPROG",
+            cancellationToken);
+
+        var passwordHash = passwordHasher.HashPassword(
+            initialAdminPassword);
+
+        var administrator = new User(
+            SiteEnums.PiSp,
+            "SA",
+            "SYSTEM ADMINISTRATOR",
+            departmentId,
+            sectionId,
+            positionId,
+            passwordHash,
+            UserRoleEnums.Superadmin);
+
+        administrator.SetCreatedAudit("SYSTEM");
+
+        await context.Users.AddAsync(
+            administrator,
+            cancellationToken);
+
+        await context.SaveChangesAsync(
+            cancellationToken);
+    }
+
+    private static async Task<Guid> GetDepartmentIdAsync(
+        SFMSDbContext context,
+        string departmentCode,
+        CancellationToken cancellationToken)
+    {
+
+        var department = await context.Departments.FirstOrDefaultAsync(d => d.Code == departmentCode, cancellationToken: cancellationToken);
+
+        return department == null
+            ? throw new InvalidOperationException($"Required Department with code '{departmentCode}' was not found during seeding. Please ensure departments are seeded first.")
+            : await context.Departments
+            .Where(
+                department =>
+                    department.Code == departmentCode)
+            .Select(
+                department =>
+                    department.Id)
+            .SingleAsync(cancellationToken);
+    }
+
+    private static async Task<Guid> GetSectionIdAsync(
+        SFMSDbContext context,
+        Guid departmentId,
+        string sectionCode,
+        CancellationToken cancellationToken)
+    {
+        return await context.Sections
+            .Where(
+                section =>
+                    section.DepartmentId == departmentId &&
+                    section.Code == sectionCode)
+            .Select(
+                section =>
+                    section.Id)
+            .SingleAsync(cancellationToken);
+    }
+
+    private static async Task<Guid> GetPositionIdAsync(
+        SFMSDbContext context,
+        string positionCode,
+        CancellationToken cancellationToken)
+    {
+        return await context.Positions
+            .Where(
+                position =>
+                    position.Code == positionCode)
+            .Select(
+                position =>
+                    position.Id)
+            .SingleAsync(cancellationToken);
     }
 }

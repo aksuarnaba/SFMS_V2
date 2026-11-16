@@ -28,6 +28,12 @@ namespace SFMS.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(20)");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("datetimeoffset");
 
@@ -37,7 +43,7 @@ namespace SFMS.Infrastructure.Migrations
                     b.Property<DateTimeOffset?>("LastModifiedAt")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("ModifiedAt")
+                    b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -46,6 +52,9 @@ namespace SFMS.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.HasIndex("Name")
                         .IsUnique();
@@ -59,6 +68,12 @@ namespace SFMS.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(20)");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("datetimeoffset");
 
@@ -68,7 +83,7 @@ namespace SFMS.Infrastructure.Migrations
                     b.Property<DateTimeOffset?>("LastModifiedAt")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("ModifiedAt")
+                    b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -77,6 +92,9 @@ namespace SFMS.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.HasIndex("Name")
                         .IsUnique();
@@ -90,16 +108,25 @@ namespace SFMS.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(30)");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("DepartmentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTimeOffset?>("LastModifiedAt")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("ModifiedAt")
+                    b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -109,7 +136,7 @@ namespace SFMS.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
+                    b.HasIndex("DepartmentId", "Code")
                         .IsUnique();
 
                     b.ToTable("Sections", (string)null);
@@ -120,9 +147,6 @@ namespace SFMS.Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Access")
-                        .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("datetimeoffset");
@@ -136,15 +160,18 @@ namespace SFMS.Infrastructure.Migrations
                     b.Property<string>("EmployeeNumber")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTimeOffset?>("LastModifiedAt")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("ModifiedAt")
+                    b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -154,13 +181,12 @@ namespace SFMS.Infrastructure.Migrations
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(500)");
 
                     b.Property<Guid>("PositionId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Rights")
-                        .HasColumnType("int");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
@@ -169,7 +195,8 @@ namespace SFMS.Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Signature")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("Site")
                         .HasColumnType("int");
@@ -186,6 +213,17 @@ namespace SFMS.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("SFMS.Domain.Entities.Section", b =>
+                {
+                    b.HasOne("SFMS.Domain.Entities.Department", "Department")
+                        .WithMany("Sections")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Department");
                 });
 
             modelBuilder.Entity("SFMS.Domain.Entities.User", b =>
@@ -217,6 +255,8 @@ namespace SFMS.Infrastructure.Migrations
 
             modelBuilder.Entity("SFMS.Domain.Entities.Department", b =>
                 {
+                    b.Navigation("Sections");
+
                     b.Navigation("Users");
                 });
 

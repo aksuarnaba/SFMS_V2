@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using SFMS.Application.Common.Interfaces.Security;
 using SFMS.Domain.Entities;
+using SFMS.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -50,9 +51,9 @@ namespace SFMS.Infrastructure.Security
             new(ClaimTypes.Name, user.EmployeeNumber),
             new(ClaimTypes.Role, user.Role.ToString()),
 
-            new("site", user.Site.ToString()),
-            new("access", user.Access.ToString()),
-            new("rights", user.Rights.ToString())
+            new("site", user.Site.ToCode()),
+            //new("access", user.Access.ToString()),
+            //new("rights", user.Rights.ToString())
         };
 
             var key = new SymmetricSecurityKey(

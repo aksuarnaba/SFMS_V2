@@ -14,8 +14,6 @@ namespace SFMS.Application.Features.Users.Queries.GetUsers
             string Section,
             string Position,
             UserRoleEnums Role,
-            bool IsActive,
-            UserAccessEnums Access,
-            UserRightsEnums Rights
+            bool IsActive
         );
 }

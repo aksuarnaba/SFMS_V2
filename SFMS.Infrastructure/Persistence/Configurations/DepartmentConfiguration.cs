@@ -7,13 +7,18 @@ using System.Text;
 
 namespace SFMS.Infrastructure.Persistence.Configurations
 {
-    public class DepartmentConfiguration : IEntityTypeConfiguration<Department>
+    public sealed class DepartmentConfiguration : IEntityTypeConfiguration<Department>
     {
         public void Configure(EntityTypeBuilder<Department> builder)
         {
             builder.ToTable("Departments");
 
             builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Code)
+                .IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
 
             builder.Property(x => x.Name)
                 .IsRequired()
@@ -22,10 +27,10 @@ namespace SFMS.Infrastructure.Persistence.Configurations
             builder.HasIndex(x => x.Name)
                 .IsUnique();
 
-            builder.HasMany(x => x.Users)
-                .WithOne(x => x.Department)
-                .HasForeignKey(x => x.DepartmentId)
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.HasIndex(x => x.Code)
+                .IsUnique();
+
+
         }
     }
 }

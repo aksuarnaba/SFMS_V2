@@ -8,7 +8,7 @@ namespace SFMS.Infrastructure.Persistence.Context
 {
     public class SFMSDbContext(DbContextOptions<SFMSDbContext> options) : DbContext(options)
     {
-        public DbSet<User> User => Set<User>();
+        public DbSet<User> Users => Set<User>();
         public DbSet<Department> Departments => Set<Department>();
         public DbSet<Section> Sections => Set<Section>();
         public DbSet<Position> Positions => Set<Position>();

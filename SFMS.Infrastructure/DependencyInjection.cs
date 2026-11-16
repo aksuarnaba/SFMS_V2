@@ -15,19 +15,35 @@ namespace SFMS.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("SFMSConnection")
-                ?? throw new InvalidOperationException("Connection string 'SFMS Connection' was not found.");
+            var connectionString =
+                configuration.GetConnectionString(
+                    "SFMSConnection")
+                ?? throw new InvalidOperationException(
+                    "Connection string 'SFMSConnection' was not found.");
 
-            services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
+            services.Configure<JwtSettings>(
+                configuration.GetSection(
+                    JwtSettings.SectionName));
 
-            services.AddScoped<ITokenService, JwtTokenService>();
+            services.AddDbContext<SFMSDbContext>(
+                options =>
+                    options.UseSqlServer(connectionString));
 
-            services.AddDbContext<SFMSDbContext>(options => options.UseSqlServer(connectionString));
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IPasswordHasher, PasswordHasher>();
-            services.AddScoped<ITokenService, JwtTokenService>();
+            services.AddScoped<
+                IUserRepository,
+                UserRepository>();
+
+            services.AddScoped<
+                IPasswordHasher,
+                PasswordHasher>();
+
+            services.AddScoped<
+                ITokenService,
+                JwtTokenService>();
 
             return services;
         }

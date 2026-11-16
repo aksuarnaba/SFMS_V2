@@ -1,5 +1,9 @@
 <Solution>
-  <Folder Name="/src/" />
+  <Folder Name="/src/">
+    <Project Path="SFMS.MAUI/SFMS.MAUI.csproj" Id="e3f35319-9de6-47a6-9448-63d726899bc3">
+      <Deploy Solution="Debug|*" />
+    </Project>
+  </Folder>
   <Folder Name="/src/Api/">
     <Project Path="SFMS.Api/SFMS.Api.csproj" />
   </Folder>
@@ -12,5 +16,4 @@
   <Folder Name="/src/Infrastructure/">
     <Project Path="SFMS.Infrastructure/SFMS.Infrastructure.csproj" />
   </Folder>
-  <Folder Name="/src/Presentation/" />
 </Solution>

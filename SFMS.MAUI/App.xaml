@@ -1,0 +1,23 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SFMS.MAUI"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="SFMS.MAUI.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- 1. UraniumUI Material theme -->
+                <material:StyleResource />
+
+                <!-- 2. Your SFMS color palette -->
+                <ResourceDictionary
+                    Source="Resources/Styles/Colors.xaml" />
+
+                <!-- 3. Your SFMS custom styles -->
+                <ResourceDictionary
+                    Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

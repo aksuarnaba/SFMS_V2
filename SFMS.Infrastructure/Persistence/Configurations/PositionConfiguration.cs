@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SFMS.Infrastructure.Persistence.Configurations
 {
-    public class PositionConfiguration : IEntityTypeConfiguration<Position>
+    public sealed class PositionConfiguration : IEntityTypeConfiguration<Position>
     {
         public void Configure(EntityTypeBuilder<Position> builder)
         {
@@ -15,17 +15,21 @@ namespace SFMS.Infrastructure.Persistence.Configurations
 
             builder.HasKey(x => x.Id);
 
+            builder.Property(x => x.Code)
+                .IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
+
             builder.Property(x => x.Name)
                 .IsRequired()
                 .HasMaxLength(100);
 
+            builder.HasIndex(x => x.Code)
+                .IsUnique();
+
             builder.HasIndex(x => x.Name)
                 .IsUnique();
 
-            builder.HasMany(x => x.Users)
-                .WithOne(x => x.Position)
-                .HasForeignKey(x => x.PositionId)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
     

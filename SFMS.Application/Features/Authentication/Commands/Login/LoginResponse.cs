@@ -10,7 +10,5 @@ namespace SFMS.Application.Features.Authentication.Commands.Login
         string EmployeeNumber,
         string Name,
         SiteEnums Site,
-        UserRoleEnums Role,
-        UserAccessEnums Access,
-        UserRightsEnums Rights);
+        UserRoleEnums Role);
 }

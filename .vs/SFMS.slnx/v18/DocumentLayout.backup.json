@@ -1,0 +1,702 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Project\\01. PRIME\\SFMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\users\\queries\\getusers\\getusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\users\\queries\\getusers\\getusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\sfms.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\sfms.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\migrations\\20261116075658_normalizeuserorganization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\migrations\\20261116075658_normalizeuserorganization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\seeders\\sfmsdbcontextseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\seeders\\sfmsdbcontextseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\context\\sfmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\context\\sfmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\configurations\\departmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\configurations\\departmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\configurations\\positionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\configurations\\positionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\configurations\\sectionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\configurations\\sectionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\entities\\section.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\entities\\section.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\entities\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\entities\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\authentication\\commands\\login\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\authentication\\commands\\login\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\authentication\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\authentication\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\security\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\security\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\users\\queries\\getusers\\userlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\users\\queries\\getusers\\userlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\endpoints\\userendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\endpoints\\userendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\security\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\security\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\endpoints\\authenticationendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\endpoints\\authenticationendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\contracts\\authentication\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\contracts\\authentication\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\authentication\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\authentication\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\users\\queries\\getusers\\getusersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\users\\queries\\getusers\\getusersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\features\\users\\queries\\getusers\\getusersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\features\\users\\queries\\getusers\\getusersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\common\\interfaces\\security\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\common\\interfaces\\security\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\common\\interfaces\\security\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\common\\interfaces\\security\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|c:\\project\\01. prime\\sfms\\sfms.application\\common\\interfaces\\persistence\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B968516-2264-8D42-F7A3-1248DA77FDA4}|SFMS.Application\\SFMS.Application.csproj|solutionrelative:sfms.application\\common\\interfaces\\persistence\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\common\\auditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\common\\auditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\enums\\userroleenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\enums\\userroleenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\enums\\useraccessenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\enums\\useraccessenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|c:\\project\\01. prime\\sfms\\sfms.domain\\enums\\siteenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A85A8A0-F2E1-4BA5-25AE-BA4742593365}|SFMS.Domain\\SFMS.Domain.csproj|solutionrelative:sfms.domain\\enums\\siteenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:46.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20261116075658_NormalizeUserOrganization.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Migrations\\20261116075658_NormalizeUserOrganization.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Migrations\\20261116075658_NormalizeUserOrganization.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Migrations\\20261116075658_NormalizeUserOrganization.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Migrations\\20261116075658_NormalizeUserOrganization.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAQwHoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T07:56:58.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetUsersQueryHandler.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQueryHandler.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQueryHandler.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQueryHandler.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQueryHandler.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:13.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Program.cs",
+              "RelativeDocumentMoniker": "SFMS.Api\\Program.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Program.cs",
+              "RelativeToolTip": "SFMS.Api\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:12:09.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SFMSDbContextSeeder.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAJQBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:09.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwE8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:03.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SFMS.Api.http",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\SFMS.Api.http",
+              "RelativeDocumentMoniker": "SFMS.Api\\SFMS.Api.http",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\SFMS.Api.http",
+              "RelativeToolTip": "SFMS.Api\\SFMS.Api.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-11-16T07:47:11.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SFMSDbContext.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Context\\SFMSDbContext.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Context\\SFMSDbContext.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Context\\SFMSDbContext.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Context\\SFMSDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T04:23:49.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "SFMS.Api\\appsettings.json",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\appsettings.json",
+              "RelativeToolTip": "SFMS.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-16T08:16:02.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
+              "ToolTip": "C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-16T05:13:29.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAqwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:47:26.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepartmentConfiguration.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\DepartmentConfiguration.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Configurations\\DepartmentConfiguration.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\DepartmentConfiguration.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Configurations\\DepartmentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T07:18:12.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PositionConfiguration.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\PositionConfiguration.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Configurations\\PositionConfiguration.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\PositionConfiguration.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Configurations\\PositionConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T04:19:48.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SectionConfiguration.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\SectionConfiguration.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Configurations\\SectionConfiguration.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Configurations\\SectionConfiguration.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Configurations\\SectionConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:47:41.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Section.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Section.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Entities\\Section.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Section.cs",
+              "RelativeToolTip": "SFMS.Domain\\Entities\\Section.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:58:06.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Entities\\Department.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Department.cs",
+              "RelativeToolTip": "SFMS.Domain\\Entities\\Department.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvz8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:52:35.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "SFMS.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAwKUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T02:53:14.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginResponse.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginResponse.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:47.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommandHandler.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommandHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA2wC8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:36.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Position.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Entities\\Position.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Entities\\Position.cs",
+              "RelativeToolTip": "SFMS.Domain\\Entities\\Position.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:28:18.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Security\\JwtTokenService.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\JwtTokenService.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Security\\JwtTokenService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAA9wB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:38.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserListResponse.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\UserListResponse.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\UserListResponse.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\UserListResponse.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\UserListResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:29.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserEndpoints.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Endpoints\\UserEndpoints.cs",
+              "RelativeDocumentMoniker": "SFMS.Api\\Endpoints\\UserEndpoints.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Endpoints\\UserEndpoints.cs",
+              "RelativeToolTip": "SFMS.Api\\Endpoints\\UserEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:58.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Security\\JwtSettings.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\JwtSettings.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Security\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:34.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthenticationEndpoints.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Endpoints\\AuthenticationEndpoints.cs",
+              "RelativeDocumentMoniker": "SFMS.Api\\Endpoints\\AuthenticationEndpoints.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Endpoints\\AuthenticationEndpoints.cs",
+              "RelativeToolTip": "SFMS.Api\\Endpoints\\AuthenticationEndpoints.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwCQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:53.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Contracts\\Authentication\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "SFMS.Api\\Contracts\\Authentication\\LoginRequest.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Contracts\\Authentication\\LoginRequest.cs",
+              "RelativeToolTip": "SFMS.Api\\Contracts\\Authentication\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:46.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "SFMS.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T06:32:34.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommand.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommand.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Authentication\\Commands\\Login\\LoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:33.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetUsersResponse.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersResponse.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersResponse.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersResponse.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:29.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GetUsersQuery.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQuery.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQuery.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQuery.cs",
+              "RelativeToolTip": "SFMS.Application\\Features\\Users\\Queries\\GetUsers\\GetUsersQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:11:09.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Security\\ITokenService.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Common\\Interfaces\\Security\\ITokenService.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Security\\ITokenService.cs",
+              "RelativeToolTip": "SFMS.Application\\Common\\Interfaces\\Security\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:28.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Security\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Common\\Interfaces\\Security\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Security\\IPasswordHasher.cs",
+              "RelativeToolTip": "SFMS.Application\\Common\\Interfaces\\Security\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:23.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "SFMS.Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
+              "RelativeToolTip": "SFMS.Application\\Common\\Interfaces\\Persistence\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T05:10:18.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Security\\PasswordHasher.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Security\\PasswordHasher.cs",
+              "RelativeToolTip": "SFMS.Infrastructure\\Security\\PasswordHasher.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:48:41.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserRoleEnums.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\UserRoleEnums.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Enums\\UserRoleEnums.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\UserRoleEnums.cs",
+              "RelativeToolTip": "SFMS.Domain\\Enums\\UserRoleEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T02:50:10.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AuditableEntity.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Common\\AuditableEntity.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Common\\AuditableEntity.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Common\\AuditableEntity.cs",
+              "RelativeToolTip": "SFMS.Domain\\Common\\AuditableEntity.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvwwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T02:47:37.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "SFMS.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T02:46:43.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserAccessEnums.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\UserAccessEnums.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Enums\\UserAccessEnums.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\UserAccessEnums.cs",
+              "RelativeToolTip": "SFMS.Domain\\Enums\\UserAccessEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:28:58.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SiteEnums.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\SiteEnums.cs",
+              "RelativeDocumentMoniker": "SFMS.Domain\\Enums\\SiteEnums.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Domain\\Enums\\SiteEnums.cs",
+              "RelativeToolTip": "SFMS.Domain\\Enums\\SiteEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T03:28:54.228Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

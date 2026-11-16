@@ -1,9 +1,9 @@
-
-
+using SFMS.Application.Common.Interfaces.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using SFMS.Api.Endpoints;
 using SFMS.Application;
+using SFMS.Domain.Enums;
 using SFMS.Infrastructure;
 using SFMS.Infrastructure.Persistence.Context;
 using SFMS.Infrastructure.Persistence.Seeders;
@@ -60,11 +60,13 @@ builder.Services
         };
     });
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AdminOrSuperadmin", policy =>
-        policy.RequireRole("Superadmin", "Admin"));
-});
+builder.Services.AddAuthorizationBuilder()
+    .AddPolicy("AdminOrSuperadmin", policy =>
+        policy.RequireRole(
+            nameof(UserRoleEnums.Superadmin),
+            nameof(UserRoleEnums.Admin)));
+
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
@@ -72,18 +74,36 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<SFMSDbContext>();
+
+    var context =
+        services.GetRequiredService<SFMSDbContext>();
+
+    var passwordHasher =
+        services.GetRequiredService<IPasswordHasher>();
+
+    var initialAdminPassword =
+        builder.Configuration[
+            "InitialAdmin:Password"];
 
     try
     {
-        Console.WriteLine("🔄 Starting database seeding...");
-        await ApplicationDbContextSeeder.SeedAsync(context);
-        Console.WriteLine("✓ Database seeding completed successfully!");
+        Console.WriteLine(
+            "Starting SFMS master-data seeding...");
+
+        await SFMSDbContextSeeder.SeedAsync(
+            context,
+            passwordHasher,
+            initialAdminPassword);
+
+        Console.WriteLine(
+            "SFMS master-data seeding completed.");
     }
-    catch (Exception ex)
+    catch (Exception exception)
     {
-        Console.WriteLine($"✗ Database seeding failed: {ex.Message}");
-        Console.WriteLine($"Stack trace: {ex.StackTrace}");
+        app.Logger.LogCritical(
+            exception,
+            "SFMS database seeding failed.");
+
         throw;
     }
 }

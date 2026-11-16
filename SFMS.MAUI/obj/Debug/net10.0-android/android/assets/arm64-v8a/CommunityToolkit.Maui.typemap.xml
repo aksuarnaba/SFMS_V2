@@ -1,0 +1,14 @@
+<api type="debug" assembly-name="CommunityToolkit.Maui" mvid="95dec3c43b3549faaea89e6518998549">
+  <java-to-managed>
+    <entry java-name="crc640a66c1e0aa3d01ae/Expander_ExpandOrCollapseCommand" managed-name="CommunityToolkit.Maui.Views.Expander+ExpandOrCollapseCommand, CommunityToolkit.Maui" managed-type-token-id="33554729" />
+    <entry java-name="crc64308147b72ef9fa87/NavigationBar_NavigationBarOverlayInsetsListener" managed-name="CommunityToolkit.Maui.PlatformConfiguration.AndroidSpecific.NavigationBar+NavigationBarOverlayInsetsListener, CommunityToolkit.Maui" managed-type-token-id="33554748" />
+    <entry java-name="crc640fd0ddb16fe433d4/TouchBehavior_AccessibilityListener" managed-name="CommunityToolkit.Maui.Behaviors.TouchBehavior+AccessibilityListener, CommunityToolkit.Maui" managed-type-token-id="33554837" />
+    <entry java-name="crc648fc34c62be8fbbff/Snackbar_SnackbarCallback" managed-name="CommunityToolkit.Maui.Alerts.Snackbar+SnackbarCallback, CommunityToolkit.Maui" managed-type-token-id="33554873" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc640a66c1e0aa3d01ae/Expander_ExpandOrCollapseCommand" managed-name="CommunityToolkit.Maui.Views.Expander+ExpandOrCollapseCommand, CommunityToolkit.Maui" managed-type-token-id="33554729" />
+    <entry java-name="crc64308147b72ef9fa87/NavigationBar_NavigationBarOverlayInsetsListener" managed-name="CommunityToolkit.Maui.PlatformConfiguration.AndroidSpecific.NavigationBar+NavigationBarOverlayInsetsListener, CommunityToolkit.Maui" managed-type-token-id="33554748" />
+    <entry java-name="crc640fd0ddb16fe433d4/TouchBehavior_AccessibilityListener" managed-name="CommunityToolkit.Maui.Behaviors.TouchBehavior+AccessibilityListener, CommunityToolkit.Maui" managed-type-token-id="33554837" />
+    <entry java-name="crc648fc34c62be8fbbff/Snackbar_SnackbarCallback" managed-name="CommunityToolkit.Maui.Alerts.Snackbar+SnackbarCallback, CommunityToolkit.Maui" managed-type-token-id="33554873" />
+  </managed-to-java>
+</api>

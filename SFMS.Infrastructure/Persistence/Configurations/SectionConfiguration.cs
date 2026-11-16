@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SFMS.Infrastructure.Persistence.Configurations
 {
-    public class SectionConfiguration
+    public sealed class SectionConfiguration
     : IEntityTypeConfiguration<Section>
     {
         public void Configure(EntityTypeBuilder<Section> builder)
@@ -16,17 +16,29 @@ namespace SFMS.Infrastructure.Persistence.Configurations
 
             builder.HasKey(x => x.Id);
 
+            builder.Property(x => x.Code)
+                .IsRequired()
+                .HasMaxLength(30)
+                .IsUnicode(false);
+
             builder.Property(x => x.Name)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            builder.HasIndex(x => x.Name)
-                .IsUnique();
+            builder.Property(x => x.DepartmentId)
+                .IsRequired();
 
-            builder.HasMany(x => x.Users)
-                .WithOne(x => x.Section)
-                .HasForeignKey(x => x.SectionId)
+            builder.HasIndex(x => new
+            {
+                x.DepartmentId,
+                x.Code
+            }).IsUnique();
+
+            builder.HasOne(x => x.Department)
+                .WithMany(x => x.Sections)
+                .HasForeignKey(x => x.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

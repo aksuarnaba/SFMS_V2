@@ -6,15 +6,10 @@ using System.Text;
 
 namespace SFMS.Application.Features.Users.Queries.GetUsers
 {
-    public sealed class GetUsersQueryHandler
-    : IRequestHandler<GetUsersQuery, GetUsersResponse>
+    public sealed class GetUsersQueryHandler(IUserRepository userRepository)
+        : IRequestHandler<GetUsersQuery, GetUsersResponse>
     {
-        private readonly IUserRepository _userRepository;
-
-        public GetUsersQueryHandler(IUserRepository userRepository)
-        {
-            _userRepository = userRepository;
-        }
+        private readonly IUserRepository _userRepository = userRepository;
 
         public async Task<GetUsersResponse> Handle(
             GetUsersQuery request,
@@ -37,13 +32,11 @@ namespace SFMS.Application.Features.Users.Queries.GetUsers
                 user.Site,
                 user.EmployeeNumber,
                 user.Name,
-                user.Department.Name,
-                user.Section.Name,
-                user.Position.Name,
+                user.Department?.Name ?? "N/A",
+                user.Section?.Name ?? "N/A",
+                user.Position?.Name ?? "N/A",
                 user.Role,
-                user.IsActive,
-                user.Access,
-                user.Rights
+                user.IsActive
             )).ToList();
 
             var totalPages = (int)Math.Ceiling(

@@ -55,9 +55,7 @@ namespace SFMS.Application.Features.Authentication.Commands.Login
                 user.EmployeeNumber,
                 user.Name,
                 user.Site,
-                user.Role,
-                user.Access,
-                user.Rights);
+                user.Role);
         }
     }
 }
