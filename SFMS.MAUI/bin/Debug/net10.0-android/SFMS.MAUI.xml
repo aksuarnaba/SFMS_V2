@@ -8,6 +8,9 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.SelectedSite">
+            <inheritdoc/>
+        </member>
         <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.EmployeeNumber">
             <inheritdoc/>
         </member>
@@ -17,11 +20,17 @@
         <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.Message">
             <inheritdoc/>
         </member>
+        <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.IsBusy">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.HasError">
+            <inheritdoc/>
+        </member>
         <member name="F:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.loginCommand">
             <summary>The backing field for <see cref="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginCommand"/>.</summary>
         </member>
         <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.Login"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginAsync"/>.</summary>
         </member>
         <member name="T:SFMS.MAUI.Resource">
             <summary>
@@ -165,6 +174,9 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedSite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedSite" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmployeeNumber">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmployeeNumber" generated properties.</summary>
         </member>
@@ -174,11 +186,20 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Message">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Message" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedSite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedSite" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmployeeNumber">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmployeeNumber" generated properties.</summary>
@@ -188,6 +209,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Message">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Message" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasError" generated properties.</summary>
         </member>
     </members>
 </doc>

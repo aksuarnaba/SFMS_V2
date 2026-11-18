@@ -78,11 +78,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Services\Api\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\Authentication\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

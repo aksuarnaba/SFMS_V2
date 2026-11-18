@@ -15,16 +15,18 @@ namespace SFMS.MAUI
         protected override Window CreateWindow(IActivationState? activationState)
         {
             var loginPage = _serviceProvider.GetRequiredService<LoginPage>();
+
             var window = new Window(loginPage)
             {
-                Width = 550,
-                Height = 750,
 
-                MinimumWidth = 450,
+                Title = "SFMS - Shopfloor Management System",
+
+                Width = 1180,
+                Height = 760,
+
+                MinimumWidth = 900,
                 MinimumHeight = 650,
 
-                MaximumWidth = 550,
-                MaximumHeight = 850
             };
             return window;
         }

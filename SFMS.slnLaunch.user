@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "SFMS.MAUI\\SFMS.MAUI.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      },
+      {
+        "Path": "SFMS.Api\\SFMS.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

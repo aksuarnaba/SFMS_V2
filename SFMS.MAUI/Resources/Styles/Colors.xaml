@@ -10,41 +10,27 @@
 
     <Color x:Key="Primary">#2563EB</Color>
     <Color x:Key="PrimaryDark">#1D4ED8</Color>
-    <Color x:Key="PrimaryDarkText">#FFFFFF</Color>
+    <Color x:Key="PrimaryLight">#DBEAFE</Color>
 
-    <Color x:Key="Secondary">#DBEAFE</Color>
-    <Color x:Key="SecondaryDarkText">#BFDBFE</Color>
+    <Color x:Key="BrandNavy">#0B1F3A</Color>
+    <Color x:Key="BrandBlue">#2563EB</Color>
+    <Color x:Key="BrandSky">#3B82F6</Color>
 
-    <Color x:Key="Tertiary">#0F2744</Color>
-
-    <!-- Neutral -->
-    <Color x:Key="White">#FFFFFF</Color>
-    <Color x:Key="Black">#172033</Color>
-
-    <Color x:Key="OffBlack">#0F172A</Color>
-
-    <!-- Brand aliases -->
-    <Color x:Key="MidnightBlue">#0F2744</Color>
-    <Color x:Key="Magenta">#2563EB</Color>
-
-    <!-- Application -->
-    <Color x:Key="Background">#F6F8FC</Color>
+    <Color x:Key="Background">#F3F6FA</Color>
     <Color x:Key="Surface">#FFFFFF</Color>
 
-    <!-- Text -->
     <Color x:Key="TextPrimary">#172033</Color>
+    <Color x:Key="PrimaryDarkText">#93C5FD</Color>
     <Color x:Key="TextSecondary">#64748B</Color>
     <Color x:Key="TextMuted">#94A3B8</Color>
 
-    <!-- Border -->
-    <Color x:Key="Border">#DCE3EC</Color>
+    <Color x:Key="Border">#D7E0EA</Color>
     <Color x:Key="BorderLight">#EAF0F6</Color>
 
-    <!-- Semantic -->
-    <Color x:Key="Success">#16803C</Color>
-    <Color x:Key="Warning">#D97706</Color>
-    <Color x:Key="Danger">#DC2626</Color>
-    <Color x:Key="Info">#0284C7</Color>
+    <Color x:Key="Success">#15803D</Color>
+    <Color x:Key="Warning">#B45309</Color>
+    <Color x:Key="Danger">#B42318</Color>
+    <Color x:Key="Info">#0369A1</Color>
 
     <!-- Grays -->
     <Color x:Key="Gray100">#F8FAFC</Color>
@@ -58,6 +44,9 @@
 
     <!-- SFMS THEME -->
     <Color x:Key="Seventh">#1E90FF</Color>
+    <Color x:Key="OffBlack">#111827</Color>
+    <Color x:Key="SecondaryDarkText">#9CA3AF</Color>
+    <Color x:Key="Magenta">#EC4899</Color>
 
     <!-- Brushes -->
     <SolidColorBrush

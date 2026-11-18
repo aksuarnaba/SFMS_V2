@@ -6,10 +6,6 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\com.companyname.sf
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\com.companyname.sfms.maui-Signed.aab
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\com.companyname.sfms.maui-Signed.apk
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\com.companyname.sfms.maui-Signed.apk.idsig
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-android\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\build.props
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\adb.props
@@ -135,7 +131,6 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.Assembly
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.csproj.CoreCompileInputs.cache
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.sourcelink.json
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\XamlC.stamp
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.csproj.Up2Date
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.dll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.pdb
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\SFMS.MAUI.genruntimeconfig.cache
@@ -2450,7 +2445,6 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\assets\x86
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\assets\x86_64\_Microsoft.Android.Resource.Designer.jlo.xml
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\assets\x86_64\_Microsoft.Android.Resource.Designer.typemap.xml
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\__environment__.txt
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\typemaps.arm64-v8a.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\typemaps.x86_64.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\AndroidManifest.xml
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\AndroidManifest.xml
@@ -2459,9 +2453,7 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\src\mono\J
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\assets\machine.config
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\bin\mono.android.jar
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\static.flag
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\environment.arm64-v8a.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\environment.x86_64.ll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\marshal_methods.arm64-v8a.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\marshal_methods.x86_64.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\src\androidx\activity\ktx\R.java
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\src\androidx\activity\R.java
@@ -2889,19 +2881,12 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\assets\OpenSans-Se
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\bin\packaged_resources
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\src\com\companyname\sfms\maui\R.java
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\_CompileJava.FileList.txt
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\compressed_assemblies.arm64-v8a.ll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\compressed_assemblies.x86_64.ll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\typemaps.arm64-v8a.o
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\typemaps.x86_64.o
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\environment.arm64-v8a.o
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\environment.x86_64.o
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\compressed_assemblies.arm64-v8a.o
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\compressed_assemblies.x86_64.o
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\marshal_methods.arm64-v8a.o
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\marshal_methods.x86_64.o
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\jni_remap.arm64-v8a.o
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\jni_remap.x86_64.o
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\bin\classes.dex
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-android\android\bin\classes2.dex

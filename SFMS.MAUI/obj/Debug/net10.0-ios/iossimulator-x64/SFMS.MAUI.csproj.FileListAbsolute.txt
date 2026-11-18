@@ -287,10 +287,6 @@ C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\libxa
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.resources.zip
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-ios\iossimulator-x64\SFMS.MAUI.csproj.AssemblyReference.cache
 C:\Project\01. PRIME\SFMS\SFMS.MAUI\obj\Debug\net10.0-ios\iossimulator-x64\partialappmanifest\_PartialAppManifests.items
