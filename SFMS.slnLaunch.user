@@ -1,6 +1,6 @@
 [
   {
-    "Name": "New Profile",
+    "Name": "ApplicationAndApi",
     "Projects": [
       {
         "Path": "SFMS.MAUI\\SFMS.MAUI.csproj",

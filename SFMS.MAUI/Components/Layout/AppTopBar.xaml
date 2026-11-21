@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Layout.AppTopBar"
+    x:Name="Root">
+
+    <Grid
+        BackgroundColor="{StaticResource Surface}"
+        ColumnDefinitions="*,Auto">
+
+        <!-- ====================================== -->
+        <!-- APPLICATION CONTEXT                    -->
+        <!-- ====================================== -->
+
+        <VerticalStackLayout
+            Margin="28,0,0,0"
+            VerticalOptions="Center"
+            Spacing="2">
+
+            <Label
+                Text="{Binding PageTitle,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoBold"
+                FontSize="14"
+                TextColor="{StaticResource TextPrimary}" />
+
+            <Label
+                Text="{Binding SiteDescription,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoRegular"
+                FontSize="11"
+                TextColor="{StaticResource TextMuted}" />
+
+        </VerticalStackLayout>
+
+
+        <!-- ====================================== -->
+        <!-- CURRENT USER                           -->
+        <!-- ====================================== -->
+
+        <HorizontalStackLayout
+            Grid.Column="1"
+            Margin="0,0,28,0"
+            VerticalOptions="Center"
+            Spacing="12">
+
+            <Border
+                WidthRequest="40"
+                HeightRequest="40"
+                BackgroundColor="{StaticResource PrimaryLight}"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 20">
+
+                <Label
+                    Text="{Binding UserInitials,
+                        Source={x:Reference Root}}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontFamily="LatoBold"
+                    FontSize="12"
+                    TextColor="{StaticResource Primary}" />
+
+            </Border>
+
+            <VerticalStackLayout
+                VerticalOptions="Center"
+                Spacing="1">
+
+                <Label
+                    Text="{Binding UserName,
+                        Source={x:Reference Root}}"
+                    FontFamily="LatoBold"
+                    FontSize="12"
+                    TextColor="{StaticResource TextPrimary}" />
+
+                <Label
+                    Text="{Binding UserRole,
+                        Source={x:Reference Root}}"
+                    FontFamily="LatoRegular"
+                    FontSize="10"
+                    TextColor="{StaticResource TextMuted}" />
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+
+        <!-- Bottom divider -->
+
+        <BoxView
+            Grid.ColumnSpan="2"
+            HeightRequest="1"
+            VerticalOptions="End"
+            BackgroundColor="{StaticResource BorderLight}" />
+
+    </Grid>
+
+</ContentView>

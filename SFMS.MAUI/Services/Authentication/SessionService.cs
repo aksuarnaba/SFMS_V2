@@ -1,36 +1,98 @@
 ﻿using SFMS.MAUI.Models.Authentication;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SFMS.MAUI.Services.Authentication
+namespace SFMS.MAUI.Services.Authentication;
+
+public sealed class SessionService(
+    ISecureStorage secureStorage)
 {
-    public sealed class SessionService
+    private const string AccessTokenKey =
+        "sfms_access_token";
+
+    private const string EmployeeNumberKey =
+        "sfms_employee_number";
+
+    private const string DisplayNameKey =
+        "sfms_display_name";
+
+    private const string SiteKey =
+        "sfms_site";
+
+    private const string RoleKey =
+        "sfms_role";
+
+    private readonly ISecureStorage _secureStorage = secureStorage;
+
+    public async Task SaveAsync(
+        LoginResponse response)
     {
-        private const string AccessTokenKey = "sfms_access_token";
-        private const string EmployeeNumberKey = "sfms_employee_number";
-        private const string DisplayNameKey = "sfms_display_name";
+        ArgumentNullException.ThrowIfNull(response);
 
-        public async Task SaveAsync(LoginResponse response)
-        {
-            await SecureStorage.Default.SetAsync(AccessTokenKey, response.AccessToken);
+        await _secureStorage.SetAsync(
+            AccessTokenKey,
+            response.AccessToken);
 
-            await SecureStorage.Default.SetAsync(EmployeeNumberKey, response.EmployeeNumber);
+        await _secureStorage.SetAsync(
+            EmployeeNumberKey,
+            response.EmployeeNumber);
 
-            await SecureStorage.Default.SetAsync(DisplayNameKey, response.Name);
-        }
+        await _secureStorage.SetAsync(
+            DisplayNameKey,
+            response.Name);
 
-        public Task<string?> GetAccessTokenAsync()
-        {
-            return SecureStorage.Default.GetAsync(AccessTokenKey);
-        }
+        await _secureStorage.SetAsync(
+            SiteKey,
+            response.Site.ToString());
 
-        public void Clear()
-        {
-            SecureStorage.Default.Remove(AccessTokenKey);
-            SecureStorage.Default.Remove(EmployeeNumberKey);
-            SecureStorage.Default.Remove(DisplayNameKey);
-        }
+        await _secureStorage.SetAsync(
+            RoleKey,
+            response.Role.ToString());
+    }
 
+    public Task<string?> GetAccessTokenAsync()
+    {
+        return _secureStorage.GetAsync(
+            AccessTokenKey);
+    }
+
+    public Task<string?> GetEmployeeNumberAsync()
+    {
+        return _secureStorage.GetAsync(
+            EmployeeNumberKey);
+    }
+
+    public Task<string?> GetDisplayNameAsync()
+    {
+        return _secureStorage.GetAsync(
+            DisplayNameKey);
+    }
+
+    public Task<string?> GetSiteAsync()
+    {
+        return _secureStorage.GetAsync(
+            SiteKey);
+    }
+
+    public Task<string?> GetRoleAsync()
+    {
+        return _secureStorage.GetAsync(
+            RoleKey);
+    }
+
+    public void Clear()
+    {
+        _secureStorage.Remove(
+            AccessTokenKey);
+
+        _secureStorage.Remove(
+            EmployeeNumberKey);
+
+        _secureStorage.Remove(
+            DisplayNameKey);
+
+        _secureStorage.Remove(
+            SiteKey);
+
+        _secureStorage.Remove(
+            RoleKey);
     }
 }

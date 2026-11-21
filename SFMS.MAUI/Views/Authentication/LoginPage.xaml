@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
-    xmlns:models="clr-namespace:SFMS.MAUI.Models.Authentication"
+    xmlns:branding="clr-namespace:SFMS.MAUI.Components.Branding"
     x:Class="SFMS.MAUI.Views.Authentication.LoginPage"
     Title="SFMS Sign In"
     Shell.NavBarIsVisible="False"
@@ -14,164 +14,162 @@
         ColumnDefinitions="1.05*,0.95*"
         RowDefinitions="*">
 
-        <!-- Enterprise branding panel -->
+        <!-- ========================================= -->
+        <!-- BRAND / MACHINE PANEL                     -->
+        <!-- ========================================= -->
+
         <Border
             Grid.Column="0"
-            StrokeThickness="0"
-            Padding="56">
+            BackgroundColor="{StaticResource BrandNavy}"
+            StrokeThickness="0">
 
-            <Border.Background>
-                <LinearGradientBrush
-                    StartPoint="0,0"
-                    EndPoint="1,1">
+            <Grid>
 
-                    <GradientStop
-                        Color="{StaticResource BrandNavy}"
-                        Offset="0" />
+                <Image
+                    Source="offset_machine.jpg"
+                    Aspect="AspectFill"
+                    Opacity="0.78" />
 
-                    <GradientStop
-                        Color="{StaticResource PrimaryDark}"
-                        Offset="0.55" />
+                <BoxView InputTransparent="True">
 
-                    <GradientStop
-                        Color="{StaticResource Primary}"
-                        Offset="1" />
+                    <BoxView.Background>
 
-                </LinearGradientBrush>
-            </Border.Background>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="1,1">
 
-            <Grid
-                RowDefinitions="Auto,*,Auto">
+                            <GradientStop
+                                Color="#E014243D"
+                                Offset="0" />
 
-                <VerticalStackLayout
-                    Grid.Row="0"
-                    Spacing="6">
+                            <GradientStop
+                                Color="#B8385DCC"
+                                Offset="0.58" />
 
-                    <Label
-                        Text="SFMS"
-                        FontFamily="MontserratExtraBold"
-                        FontSize="56"
-                        CharacterSpacing="2"
-                        TextColor="White" />
+                            <GradientStop
+                                Color="#954169E1"
+                                Offset="1" />
 
-                    <Label
-                        Text="SHOPFLOOR MANAGEMENT SYSTEM"
-                        FontFamily="OpenSansSemibold"
-                        FontSize="13"
-                        CharacterSpacing="1.4"
-                        TextColor="#DCEBFF" />
+                        </LinearGradientBrush>
 
-                </VerticalStackLayout>
+                    </BoxView.Background>
 
-                <VerticalStackLayout
-                    Grid.Row="1"
-                    VerticalOptions="Center"
-                    Spacing="20"
-                    MaximumWidthRequest="520"
-                    HorizontalOptions="Start">
+                </BoxView>
 
-                    <Label
-                        Text="Production visibility where the work happens."
-                        FontFamily="MontserratExtraBold"
-                        FontSize="34"
-                        LineHeight="1.1"
-                        TextColor="White" />
+                <Grid
+                    x:Name="BrandContent"
+                    Padding="58,48"
+                    Opacity="0"
+                    TranslationX="-20"
+                    RowDefinitions="Auto,*,Auto">
 
-                    <Label
-                        Text="Manage pallet tagging, production monitoring, and shopfloor checklists through one secure internal system."
-                        FontSize="16"
-                        LineHeight="1.45"
-                        TextColor="#E5EFFF" />
+                    <!-- Larger SFMS logo -->
+
+                    <branding:BrandLogo
+                        Grid.Row="0"
+                        Variant="Full"
+                        Theme="Dark"
+                        HorizontalOptions="Start" />
+
+                    <!--
+                        Intentionally empty center.
+
+                        The offset press image is now the
+                        visual focus instead of marketing copy.
+                    -->
+
+                    <Grid Grid.Row="1" />
+
+                    <!-- Internal system footer -->
 
                     <VerticalStackLayout
-                        Margin="0,16,0,0"
-                        Spacing="12">
+                        Grid.Row="3"
+                        Spacing="4">
 
                         <Label
-                            Text="✓  On-premises production network"
-                            TextColor="White"
-                            FontSize="14" />
+                            Text="PRINTWELL INTERNAL PRODUCTION SYSTEM"
+                            FontFamily="InterSemiBold"
+                            FontSize="10"
+                            CharacterSpacing="1.05"
+                            TextColor="White" />
 
                         <Label
-                            Text="✓  Pallet tracking and tag generation"
-                            TextColor="White"
-                            FontSize="14" />
+                            Text="Authorized personnel only"
+                            FontFamily="InterRegular"
+                            FontSize="11"
+                            TextColor="#DDE8FA" />
 
                         <Label
-                            Text="✓  Monitoring checklist workflow"
-                            TextColor="White"
-                            FontSize="14" />
-
-                        <Label
-                            Text="✓  Windows and Android access"
-                            TextColor="White"
-                            FontSize="14" />
+                            Text="Aron Kyle Suarnaba"
+                            FontFamily="LatoRegular"
+                            FontSize="9"
+                            TextColor="#DDE8FA" />
 
                     </VerticalStackLayout>
 
-                </VerticalStackLayout>
-
-                <VerticalStackLayout
-                    Grid.Row="2"
-                    Spacing="4">
-
-                    <Label
-                        Text="INTERNAL PRODUCTION SYSTEM"
-                        FontFamily="OpenSansSemibold"
-                        FontSize="11"
-                        CharacterSpacing="1"
-                        TextColor="#DCEBFF" />
-
-                    <Label
-                        Text="Authorized personnel only"
-                        FontSize="11"
-                        TextColor="#B9D3F7" />
-
-                </VerticalStackLayout>
+                </Grid>
 
             </Grid>
+
         </Border>
 
-        <!-- Login area -->
+
+        <!-- ========================================= -->
+        <!-- LOGIN AREA                                -->
+        <!-- ========================================= -->
+
         <ScrollView
             Grid.Column="1"
-            VerticalScrollBarVisibility="Never">
+            VerticalScrollBarVisibility="Never"
+            BackgroundColor="{StaticResource LoginBackground}">
 
             <Grid
-                Padding="48,36"
+                Padding="48,38"
                 MinimumHeightRequest="680">
 
+                <!-- Floating sign-in card -->
+
                 <Border
-                    Padding="38"
-                    MaximumWidthRequest="470"
+                    x:Name="LoginCard"
+                    Opacity="0"
+                    TranslationY="20"
+                    Padding="38,36"
+                    WidthRequest="420"
+                    MaximumWidthRequest="420"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     BackgroundColor="{StaticResource Surface}"
-                    Stroke="{StaticResource Border}"
+                    Stroke="#EEF2F7"
                     StrokeThickness="1"
-                    StrokeShape="RoundRectangle 18">
+                    StrokeShape="RoundRectangle 26">
 
                     <Border.Shadow>
+
                         <Shadow
-                            Brush="#172033"
-                            Opacity="0.12"
-                            Radius="24"
-                            Offset="0,8" />
+                            Brush="#10213B"
+                            Opacity="0.16"
+                            Radius="32"
+                            Offset="0,12" />
+
                     </Border.Shadow>
 
-                    <VerticalStackLayout Spacing="20">
+                    <VerticalStackLayout Spacing="22">
 
-                        <VerticalStackLayout Spacing="6">
+                        <!-- Header -->
+
+                        <VerticalStackLayout Spacing="7">
 
                             <Label
                                 Text="Sign in to SFMS"
-                                FontFamily="MontserratExtraBold"
+                                FontFamily="InterBold"
                                 FontSize="28"
+                                CharacterSpacing="-0.25"
                                 TextColor="{StaticResource TextPrimary}" />
 
                             <Label
-                                Text="Use your assigned SFMS production account."
-                                FontSize="14"
+                                Text="Use your assigned production account."
+                                FontFamily="InterRegular"
+                                FontSize="13"
                                 TextColor="{StaticResource TextSecondary}" />
 
                         </VerticalStackLayout>
@@ -180,22 +178,31 @@
                             HeightRequest="1"
                             BackgroundColor="{StaticResource BorderLight}" />
 
+
+                        <!-- Site -->
+
                         <material:PickerField
                             Title="Site"
                             ItemsSource="{Binding Sites}"
                             SelectedItem="{Binding SelectedSite}"
                             ItemDisplayBinding="{Binding DisplayName}"
                             AllowClear="False"
+                            FontFamily="InterMedium"
+                            FontSize="14"
                             AccentColor="{StaticResource Primary}"
-                            BorderColor="{StaticResource Border}"
+                            BorderColor="{StaticResource FieldBorder}"
+                            BorderThickness="1"
                             TextColor="{StaticResource TextPrimary}"
                             TitleColor="{StaticResource TextSecondary}"
-                            InputBackgroundColor="{StaticResource Surface}"
-                            CornerRadius="10"
-                            HeightRequest="60" />
+                            InputBackgroundColor="{StaticResource FieldBackground}"
+                            CornerRadius="11"
+                            HeightRequest="58" />
+
+
+                        <!-- Employee number -->
 
                         <material:TextField
-                            Title="Employee number"
+                            Title="Employee Number"
                             Text="{Binding EmployeeNumber}"
                             Keyboard="Text"
                             ReturnType="Next"
@@ -203,13 +210,20 @@
                             SelectAllTextOnFocus="True"
                             IsSpellCheckEnabled="False"
                             IsTextPredictionEnabled="False"
+                            CharacterSpacing="0.35"
+                            FontFamily="InterMedium"
+                            FontSize="14"
                             AccentColor="{StaticResource Primary}"
-                            BorderColor="{StaticResource Border}"
+                            BorderColor="{StaticResource FieldBorder}"
+                            BorderThickness="1"
                             TextColor="{StaticResource TextPrimary}"
                             TitleColor="{StaticResource TextSecondary}"
-                            InputBackgroundColor="{StaticResource Surface}"
-                            CornerRadius="10"
-                            HeightRequest="60" />
+                            InputBackgroundColor="{StaticResource FieldBackground}"
+                            CornerRadius="11"
+                            HeightRequest="58" />
+
+
+                        <!-- Password -->
 
                         <material:TextField
                             Title="Password"
@@ -217,39 +231,47 @@
                             IsPassword="True"
                             ReturnType="Go"
                             ReturnCommand="{Binding LoginCommand}"
+                            FontFamily="InterMedium"
+                            FontSize="14"
                             AccentColor="{StaticResource Primary}"
-                            BorderColor="{StaticResource Border}"
+                            BorderColor="{StaticResource FieldBorder}"
+                            BorderThickness="1"
                             TextColor="{StaticResource TextPrimary}"
                             TitleColor="{StaticResource TextSecondary}"
-                            InputBackgroundColor="{StaticResource Surface}"
-                            CornerRadius="10"
-                            HeightRequest="60" />
+                            InputBackgroundColor="{StaticResource FieldBackground}"
+                            CornerRadius="11"
+                            HeightRequest="58" />
+
+
+                        <!-- Error message -->
 
                         <Border
                             IsVisible="{Binding HasError}"
                             Padding="12,10"
-                            Stroke="#FECACA"
                             BackgroundColor="#FEF2F2"
-                            StrokeShape="RoundRectangle 8">
+                            Stroke="#FECACA"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 9">
 
                             <Label
                                 Text="{Binding Message}"
-                                FontSize="13"
-                                TextColor="{StaticResource Danger}"
-                                LineBreakMode="WordWrap" />
+                                FontFamily="InterRegular"
+                                FontSize="12"
+                                LineBreakMode="WordWrap"
+                                TextColor="{StaticResource Danger}" />
 
                         </Border>
+
+
+                        <!-- Sign in -->
 
                         <Button
                             Text="Sign in"
                             Command="{Binding LoginCommand}"
-                            
-                            HeightRequest="52"
-                            FontFamily="OpenSansSemibold"
-                            FontSize="15"
-                            BackgroundColor="{StaticResource Primary}"
-                            TextColor="White"
-                            CornerRadius="10" />
+                            Style="{StaticResource LoginPrimaryButton}" />
+
+
+                        <!-- Working state -->
 
                         <HorizontalStackLayout
                             IsVisible="{Binding IsBusy}"
@@ -259,35 +281,41 @@
                             <ActivityIndicator
                                 IsRunning="{Binding IsBusy}"
                                 Color="{StaticResource Primary}"
-                                WidthRequest="20"
-                                HeightRequest="20" />
+                                WidthRequest="18"
+                                HeightRequest="18" />
 
                             <Label
                                 Text="Connecting to SFMS..."
                                 VerticalTextAlignment="Center"
-                                FontSize="13"
+                                FontFamily="InterRegular"
+                                FontSize="12"
                                 TextColor="{StaticResource TextSecondary}" />
 
                         </HorizontalStackLayout>
 
+
                         <BoxView
-                            Margin="0,4,0,0"
+                            Margin="0,2,0,0"
                             HeightRequest="1"
                             BackgroundColor="{StaticResource BorderLight}" />
 
+
+                        <!-- Footer -->
+
                         <Grid ColumnDefinitions="*,Auto">
 
-                            <VerticalStackLayout Spacing="2">
+                            <VerticalStackLayout Spacing="3">
 
                                 <Label
                                     Text="Need access?"
-                                    FontFamily="OpenSansSemibold"
-                                    FontSize="12"
+                                    FontFamily="InterSemiBold"
+                                    FontSize="11"
                                     TextColor="{StaticResource TextPrimary}" />
 
                                 <Label
-                                    Text="Contact the local SFMS administrator."
-                                    FontSize="11"
+                                    Text="Contact the IT Administrator."
+                                    FontFamily="InterRegular"
+                                    FontSize="10"
                                     TextColor="{StaticResource TextSecondary}" />
 
                             </VerticalStackLayout>
@@ -296,7 +324,8 @@
                                 Grid.Column="1"
                                 Text="v1.0.0"
                                 VerticalOptions="Center"
-                                FontSize="11"
+                                FontFamily="InterRegular"
+                                FontSize="10"
                                 TextColor="{StaticResource TextMuted}" />
 
                         </Grid>
@@ -310,4 +339,5 @@
         </ScrollView>
 
     </Grid>
+
 </ContentPage>

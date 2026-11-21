@@ -26,11 +26,34 @@
         <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.HasError">
             <inheritdoc/>
         </member>
+        <member name="M:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.OnEmployeeNumberChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.EmployeeNumber"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.EmployeeNumber"/> is changed.</remarks>
+        </member>
         <member name="F:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.loginCommand">
             <summary>The backing field for <see cref="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginCommand"/>.</summary>
         </member>
         <member name="P:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SFMS.MAUI.ViewModels.Authentication.LoginViewModel.LoginAsync"/>.</summary>
+        </member>
+        <member name="T:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel.Summary">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel.IsBusy">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel.HasError">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel.ErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:SFMS.MAUI.ViewModels.Dashboard.DashboardViewModel.LastUpdatedAt">
+            <inheritdoc/>
         </member>
         <member name="T:SFMS.MAUI.Resource">
             <summary>
@@ -192,6 +215,15 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasError">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasError" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Summary">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Summary" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LastUpdatedAt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LastUpdatedAt" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -215,6 +247,15 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasError">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Summary">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Summary" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LastUpdatedAt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LastUpdatedAt" generated properties.</summary>
         </member>
     </members>
 </doc>

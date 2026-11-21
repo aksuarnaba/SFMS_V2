@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SFMS.MAUI.Models.Authentication;
+using SFMS.MAUI.Services.Navigation;
 using SFMS.MAUI.Services.Authentication;
 using SFMS.MAUI.Services.Api;
 using System;
@@ -14,6 +15,7 @@ namespace SFMS.MAUI.ViewModels.Authentication
     {
         private readonly AuthenticationService _authenticationService;
         private readonly SessionService _sessionService;
+        private readonly INavigationService _navigationService;
 
         public ObservableCollection<SiteOption> Sites { get; } =
             [
@@ -28,17 +30,14 @@ namespace SFMS.MAUI.ViewModels.Authentication
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
-        public partial string EmployeeNumber { get; set; }
-    = string.Empty;
+        public partial string EmployeeNumber { get; set; } = string.Empty;
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
-        public partial string Password { get; set; }
-            = string.Empty;
+        public partial string Password { get; set; } = string.Empty;
 
         [ObservableProperty]
-        public partial string Message { get; set; }
-            = string.Empty;
+        public partial string Message { get; set; } = string.Empty;
 
         [ObservableProperty]
         public partial bool IsBusy { get; set; }
@@ -47,10 +46,11 @@ namespace SFMS.MAUI.ViewModels.Authentication
         public partial bool HasError { get; set; }
 
 
-        public LoginViewModel(AuthenticationService authenticationService, SessionService sessionService)
+        public LoginViewModel(AuthenticationService authenticationService, SessionService sessionService, INavigationService navigationService)
         {
             _authenticationService = authenticationService;
             _sessionService = sessionService;
+            _navigationService = navigationService;
 
             SelectedSite = Sites[0];
         }
@@ -67,13 +67,6 @@ namespace SFMS.MAUI.ViewModels.Authentication
         private async Task LoginAsync()
         {
 
-            if(_sessionService is null || _authenticationService is null)
-            {
-                HasError = true;
-                Message = "Authentication services are not initialized.";
-                return;
-            }
-
             Message = string.Empty;
             HasError = false;
             IsBusy = true;
@@ -82,31 +75,42 @@ namespace SFMS.MAUI.ViewModels.Authentication
             try
             {
                 var request = new LoginRequest(
-                    SelectedSite!.Value,
-                    EmployeeNumber.Trim().ToUpperInvariant(),
-                    Password);
+    SelectedSite!.Value,
+    EmployeeNumber.Trim().ToUpperInvariant(),
+    Password);
+
+                System.Diagnostics.Debug.WriteLine(
+                    $"LOGIN → API | Site={request.Site}, " +
+                    $"Employee={request.EmployeeNumber}");
 
                 var response =
-                    await _authenticationService.LoginAsync(request);
+                    await _authenticationService.LoginAsync(
+                        request);
 
                 if (response is null)
                 {
                     HasError = true;
+
                     Message =
                         "The site, employee number, or password is incorrect.";
 
                     return;
                 }
 
+                System.Diagnostics.Debug.WriteLine(
+                    "LOGIN → API authentication successful.");
+
                 await _sessionService.SaveAsync(response);
+
+                System.Diagnostics.Debug.WriteLine(
+                    "LOGIN → SecureStorage successful.");
 
                 Password = string.Empty;
 
-                // Temporary until DashboardPage is created.
-                await Shell.Current.DisplayAlertAsync(
-                    "Signed in",
-                    $"Welcome, {response.Name}.",
-                    "Continue");
+                await _navigationService.GoToMainAsync();
+
+                System.Diagnostics.Debug.WriteLine(
+                    "LOGIN → Navigation successful.");
             }
             catch (HttpRequestException)
             {
@@ -120,12 +124,28 @@ namespace SFMS.MAUI.ViewModels.Authentication
                 Message =
                     "The server did not respond in time. Please try again.";
             }
-            catch
+            catch (Exception exception)
             {
+                System.Diagnostics.Debug.WriteLine(
+                    "========== SFMS LOGIN FAILURE ==========");
+
+                System.Diagnostics.Debug.WriteLine(
+                    exception.ToString());
+
+                System.Diagnostics.Debug.WriteLine(
+                    "========================================");
+
                 HasError = true;
-                Message =
-                    "The sign-in request could not be completed.";
-            }
+
+                #if DEBUG
+                                Message =
+                                    $"{exception.GetType().Name}: " +
+                                    $"{exception.Message}";
+                #else
+                    Message =
+                        "The sign-in request could not be completed.";
+                #endif
+                            }
             finally
             {
                 IsBusy = false;
@@ -133,6 +153,24 @@ namespace SFMS.MAUI.ViewModels.Authentication
             }
         }
 
+        partial void OnEmployeeNumberChanged(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
 
+            var normalizedValue =
+                value.ToUpperInvariant();
+
+            if (!string.Equals(
+                    value,
+                    normalizedValue,
+                    StringComparison.Ordinal))
+            {
+                EmployeeNumber =
+                    normalizedValue;
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SFMS.MAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+96114c07f2a1576527d05350f731124e311031fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4d036038e04cea9754c369c24857a5d949d14b43")]
 [assembly: System.Reflection.AssemblyProductAttribute("SFMS.MAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SFMS.MAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

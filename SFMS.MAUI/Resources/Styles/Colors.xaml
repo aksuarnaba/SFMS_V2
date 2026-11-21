@@ -1,108 +1,180 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<ResourceDictionary 
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <!-- =============================== -->
-    <!-- SFMS Enterprise Brand            -->
-    <!-- =============================== -->
+    <!-- ===================================== -->
+    <!-- SFMS BRAND                            -->
+    <!-- ===================================== -->
 
-    <Color x:Key="Primary">#2563EB</Color>
-    <Color x:Key="PrimaryDark">#1D4ED8</Color>
-    <Color x:Key="PrimaryLight">#DBEAFE</Color>
+    <Color x:Key="Primary">
+        #4169E1
+    </Color>
 
-    <Color x:Key="BrandNavy">#0B1F3A</Color>
-    <Color x:Key="BrandBlue">#2563EB</Color>
-    <Color x:Key="BrandSky">#3B82F6</Color>
+    <Color x:Key="PrimaryHover">
+        #5278E6
+    </Color>
 
-    <Color x:Key="Background">#F3F6FA</Color>
-    <Color x:Key="Surface">#FFFFFF</Color>
+    <Color x:Key="PrimaryPressed">
+        #3157C8
+    </Color>
 
-    <Color x:Key="TextPrimary">#172033</Color>
-    <Color x:Key="PrimaryDarkText">#93C5FD</Color>
-    <Color x:Key="TextSecondary">#64748B</Color>
-    <Color x:Key="TextMuted">#94A3B8</Color>
+    <Color x:Key="PrimaryDisabled">
+        #A8B8EC
+    </Color>
 
-    <Color x:Key="Border">#D7E0EA</Color>
-    <Color x:Key="BorderLight">#EAF0F6</Color>
+    <Color x:Key="PrimaryLight">
+        #EEF2FF
+    </Color>
 
-    <Color x:Key="Success">#15803D</Color>
-    <Color x:Key="Warning">#B45309</Color>
-    <Color x:Key="Danger">#B42318</Color>
-    <Color x:Key="Info">#0369A1</Color>
+    <Color x:Key="Secondary">
+        #1E90FF
+    </Color>
 
-    <!-- Grays -->
-    <Color x:Key="Gray100">#F8FAFC</Color>
-    <Color x:Key="Gray200">#E2E8F0</Color>
-    <Color x:Key="Gray300">#CBD5E1</Color>
-    <Color x:Key="Gray400">#94A3B8</Color>
-    <Color x:Key="Gray500">#64748B</Color>
-    <Color x:Key="Gray600">#475569</Color>
-    <Color x:Key="Gray900">#1E293B</Color>
-    <Color x:Key="Gray950">#0F172A</Color>
+    <Color x:Key="BrandNavy">
+        #14243D
+    </Color>
 
-    <!-- SFMS THEME -->
-    <Color x:Key="Seventh">#1E90FF</Color>
-    <Color x:Key="OffBlack">#111827</Color>
-    <Color x:Key="SecondaryDarkText">#9CA3AF</Color>
-    <Color x:Key="Magenta">#EC4899</Color>
 
-    <!-- Brushes -->
-    <SolidColorBrush
-        x:Key="PrimaryBrush"
-        Color="{StaticResource Primary}" />
+    <!-- ===================================== -->
+    <!-- SIDEBAR                               -->
+    <!-- ===================================== -->
 
-    <SolidColorBrush
-        x:Key="SecondaryBrush"
-        Color="{StaticResource Secondary}" />
+    <!--
+        Slightly darker Royal Blue than Primary.
+        Creates contrast between navigation and
+        application actions.
+    -->
 
-    <SolidColorBrush
-        x:Key="TertiaryBrush"
-        Color="{StaticResource Tertiary}" />
+    <Color x:Key="SidebarBackground">
+        #3157C8
+    </Color>
 
-    <SolidColorBrush
-        x:Key="WhiteBrush"
-        Color="{StaticResource White}" />
+    <Color x:Key="SidebarSurface">
+        #4169E1
+    </Color>
 
-    <SolidColorBrush
-        x:Key="BlackBrush"
-        Color="{StaticResource Black}" />
+    <!-- Normal navigation text -->
 
-    <SolidColorBrush
-        x:Key="Gray100Brush"
-        Color="{StaticResource Gray100}" />
+    <Color x:Key="SidebarText">
+        #DFE7FF
+    </Color>
 
-    <SolidColorBrush
-        x:Key="Gray200Brush"
-        Color="{StaticResource Gray200}" />
+    <!-- Section labels: OPERATIONS / SYSTEM -->
 
-    <SolidColorBrush
-        x:Key="Gray300Brush"
-        Color="{StaticResource Gray300}" />
+    <Color x:Key="SidebarMuted">
+        #B9C8F5
+    </Color>
 
-    <SolidColorBrush
-        x:Key="Gray400Brush"
-        Color="{StaticResource Gray400}" />
+    <Color x:Key="SidebarDivider">
+        #5575CC
+    </Color>
 
-    <SolidColorBrush
-        x:Key="Gray500Brush"
-        Color="{StaticResource Gray500}" />
+    <!-- Selected navigation item -->
 
-    <SolidColorBrush
-        x:Key="Gray600Brush"
-        Color="{StaticResource Gray600}" />
+    <Color x:Key="SidebarSelected">
+        #5278E6
+    </Color>
 
-    <SolidColorBrush
-        x:Key="Gray900Brush"
-        Color="{StaticResource Gray900}" />
+    <Color x:Key="SidebarSelectedText">
+        #FFFFFF
+    </Color>
 
-    <SolidColorBrush
-        x:Key="Gray950Brush"
-        Color="{StaticResource Gray950}" />
 
-    <SolidColorBrush
-        x:Key="SeventhBrush"
-        Color="{StaticResource Seventh}" />
+    <!-- ===================================== -->
+    <!-- APPLICATION SURFACES                  -->
+    <!-- ===================================== -->
+
+    <Color x:Key="AppBackground">
+        #F4F7FB
+    </Color>
+
+    <Color x:Key="Background">
+        #F4F7FB
+    </Color>
+
+    <Color x:Key="Surface">
+        #FFFFFF
+    </Color>
+
+    <Color x:Key="SurfaceMuted">
+        #F8FAFD
+    </Color>
+
+    <Color x:Key="LoginBackground">
+        #F2F6FC
+    </Color>
+
+
+    <!-- ===================================== -->
+    <!-- TEXT                                  -->
+    <!-- ===================================== -->
+
+    <Color x:Key="TextPrimary">
+        #172033
+    </Color>
+
+    <Color x:Key="TextSecondary">
+        #5E6D82
+    </Color>
+
+    <Color x:Key="TextMuted">
+        #8B99AD
+    </Color>
+
+
+    <!-- ===================================== -->
+    <!-- FORMS / BORDERS                       -->
+    <!-- ===================================== -->
+
+    <Color x:Key="Border">
+        #DDE5EE
+    </Color>
+
+    <Color x:Key="BorderLight">
+        #EBF0F5
+    </Color>
+
+    <Color x:Key="FieldBorder">
+        #CED8E5
+    </Color>
+
+    <Color x:Key="FieldBackground">
+        #FFFFFF
+    </Color>
+
+
+    <!-- ===================================== -->
+    <!-- SEMANTIC COLORS                       -->
+    <!-- ===================================== -->
+
+    <Color x:Key="Success">
+        #15803D
+    </Color>
+
+    <Color x:Key="SuccessLight">
+        #ECFDF3
+    </Color>
+
+    <Color x:Key="Warning">
+        #C66A08
+    </Color>
+
+    <Color x:Key="WarningLight">
+        #FFF7E8
+    </Color>
+
+    <Color x:Key="Danger">
+        #C62F2F
+    </Color>
+
+    <Color x:Key="DangerLight">
+        #FEF2F2
+    </Color>
+
+    <Color x:Key="Info">
+        #0284C7
+    </Color>
 
 </ResourceDictionary>

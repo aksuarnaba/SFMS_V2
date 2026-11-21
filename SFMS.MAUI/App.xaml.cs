@@ -1,34 +1,39 @@
 ﻿using SFMS.MAUI.Views.Authentication;
 
-namespace SFMS.MAUI
+namespace SFMS.MAUI;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    private readonly IServiceProvider _serviceProvider;
+
+    public App(IServiceProvider serviceProvider)
     {
-        private readonly IServiceProvider _serviceProvider;
+        InitializeComponent();
 
-        public App(IServiceProvider serviceProvider)
-        {
-            InitializeComponent();
-            _serviceProvider = serviceProvider;
-        }
+        _serviceProvider = serviceProvider;
+    }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            var loginPage = _serviceProvider.GetRequiredService<LoginPage>();
+    protected override Window CreateWindow(
+        IActivationState? activationState)
+    {
+        var loginPage =
+            _serviceProvider.GetRequiredService<LoginPage>();
 
-            var window = new Window(loginPage)
-            {
+        var window = new Window(loginPage);
 
-                Title = "SFMS - Shopfloor Management System",
+#if WINDOWS
 
-                Width = 1180,
-                Height = 760,
+        window.Title =
+            "SFMS - Shopfloor Management System";
 
-                MinimumWidth = 900,
-                MinimumHeight = 650,
+        window.Width = 1180;
+        window.Height = 760;
 
-            };
-            return window;
-        }
+        window.MinimumWidth = 900;
+        window.MinimumHeight = 650;
+
+#endif
+
+        return window;
     }
 }

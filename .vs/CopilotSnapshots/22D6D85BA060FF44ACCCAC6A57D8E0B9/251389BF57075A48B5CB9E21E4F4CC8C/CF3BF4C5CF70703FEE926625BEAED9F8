@@ -1,0 +1,163 @@
+﻿using Android.Health.Connect.DataTypes.Units;
+using SFMS.MAUI.Models.Dashboard;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SFMS.MAUI.Services.Dashboard
+{
+    public class MockDashboardService : IDashboardService
+    {
+        public async Task<DashboardSummary> GetSummaryAsync(CancellationToken cancellationToken = default)
+        {
+            await Task.Delay(
+                300,
+                cancellationToken);
+
+            return new DashboardSummary(
+                TotalQtyProcessedToday: 40_300,
+                ProcessJobByMachineToday: 3,
+                ProcessJobByMachineThisWeek: 34,
+                ProcessJobBySectionToday: 12,
+                GeneratedPalletsToday: 21,
+                GeneratedChecklistToday: 12);
+        }
+
+        public async Task<IReadOnlyList<ProcessOutput>> GetProcessOutputsAsync(CancellationToken cancellationToken = default)
+        {
+            await Task.Delay(
+                250,
+                cancellationToken);
+
+            return
+            [
+            new ProcessOutput(
+                ProcessName: "DIE CUTTING",
+                PalletCount: 18,
+                Percentage: 0.90),
+
+            new ProcessOutput(
+                ProcessName: "OFFSET",
+                PalletCount: 15,
+                Percentage: 0.75),
+
+            new ProcessOutput(
+                ProcessName: "COATING",
+                PalletCount: 11,
+                Percentage: 0.55),
+
+            new ProcessOutput(
+                ProcessName: "LAMINATION",
+                PalletCount: 8,
+                Percentage: 0.40),
+
+            new ProcessOutput(
+                ProcessName: "GLUING",
+                PalletCount: 6,
+                Percentage: 0.30)
+        ];
+    }
+
+    public async Task<IReadOnlyList<RecentPallet>>
+        GetRecentPalletsAsync(
+            CancellationToken cancellationToken = default)
+        {
+            await Task.Delay(
+                250,
+                cancellationToken);
+
+            return
+            [
+                new RecentPallet(
+                Machine: "P-DIE-STAMP-A",
+                JobNumber: "P2609D2870",
+                Suffix: "1",
+                OperationNumber: "20",
+                JobName:
+                    "44513894 - CARTON BOARD NESTOGEN 1-3",
+                Quantity: 500.00000m,
+                Status: "Pending",
+                CreatedAt: new DateTimeOffset(
+                    2026,
+                    11,
+                    9,
+                    20,
+                    59,
+                    27,
+                    TimeSpan.FromHours(8))),
+
+            new RecentPallet(
+                Machine: "P-DIE-STAMP-A",
+                JobNumber: "P2609D2850",
+                Suffix: "1",
+                OperationNumber: "20",
+                JobName:
+                    "44513892 - CARTON BOARD NESTOGEN 0-6",
+                Quantity: 1000.00000m,
+                Status: "Pending",
+                CreatedAt: new DateTimeOffset(
+                    2026,
+                    11,
+                    9,
+                    20,
+                    55,
+                    33,
+                    TimeSpan.FromHours(8))),
+
+            new RecentPallet(
+                Machine: "P-DATIEN-115-B",
+                JobNumber: "P2610F0060",
+                Suffix: "9",
+                OperationNumber: "10",
+                JobName:
+                    "FUJI IND.BOX (LAGOON GREEN) BO-48 WWD",
+                Quantity: 37300.00000m,
+                Status: "Pending",
+                CreatedAt: new DateTimeOffset(
+                    2026,
+                    11,
+                    9,
+                    20,
+                    52,
+                    59,
+                    TimeSpan.FromHours(8))),
+
+            new RecentPallet(
+                Machine: "P-DIE-STAMP-A",
+                JobNumber: "P2609D2860",
+                Suffix: "1",
+                OperationNumber: "20",
+                JobName:
+                    "44513893 - CARTON BOARD NESTOGEN 6-12",
+                Quantity: 500.00000m,
+                Status: "Pending",
+                CreatedAt: new DateTimeOffset(
+                    2026,
+                    11,
+                    9,
+                    20,
+                    51,
+                    1,
+                    TimeSpan.FromHours(8))),
+
+            new RecentPallet(
+                Machine: "P-DIE-STAMP-A",
+                JobNumber: "P2609D2890",
+                Suffix: "1",
+                OperationNumber: "20",
+                JobName:
+                    "44513895 - CARTON BOARD NESTOGEN KID 3+",
+                Quantity: 500.00000m,
+                Status: "Pending",
+                CreatedAt: new DateTimeOffset(
+                    2026,
+                    11,
+                    9,
+                    20,
+                    43,
+                    20,
+                    TimeSpan.FromHours(8)))
+            ];
+        }
+    }
+}

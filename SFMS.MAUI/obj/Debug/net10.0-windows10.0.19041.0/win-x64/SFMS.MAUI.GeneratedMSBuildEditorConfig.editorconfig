@@ -56,11 +56,71 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Project/01. PRIME/SFMS/SFMS.MAUI/MainPage.xaml]
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Branding/BrandLogo.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Branding.BrandLogo.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Branding\BrandLogo.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Branding\BrandLogo.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Dashboard/KpiCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Dashboard.KpiCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Dashboard\KpiCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Dashboard\KpiCard.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Dashboard/ProcessOutputCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Dashboard.ProcessOutputCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Dashboard\ProcessOutputCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Dashboard\ProcessOutputCard.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Dashboard/RecentPalletCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Dashboard.RecentPalletCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Dashboard\RecentPalletCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Dashboard\RecentPalletCard.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Layout/AppSidebar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Layout.AppSidebar.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Layout\AppSidebar.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Layout\AppSidebar.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Layout/AppTopBar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Layout.AppTopBar.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Layout\AppTopBar.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Layout\AppTopBar.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Components/Navigation/NavigationItem.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Components.Navigation.NavigationItem.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Navigation\NavigationItem.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Navigation\NavigationItem.xaml
 build_metadata.AdditionalFiles.Inflator = SourceGen
 build_metadata.AdditionalFiles.NoWarn = 
 build_metadata.AdditionalFiles.EnableDiagnostics = 
@@ -86,11 +146,41 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Resources/Styles/Typography.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Resources.Styles.Typography.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Typography.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Typography.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
 [C:/Project/01. PRIME/SFMS/SFMS.MAUI/Views/Authentication/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Views.Authentication.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Authentication\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Authentication\LoginPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Views/Dashboard/DashboardView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Views.Dashboard.DashboardView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Dashboard\DashboardView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Dashboard\DashboardView.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Project/01. PRIME/SFMS/SFMS.MAUI/Views/Layout/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SFMS.MAUI.Views.Layout.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Layout\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Layout\MainPage.xaml
 build_metadata.AdditionalFiles.Inflator = SourceGen
 build_metadata.AdditionalFiles.NoWarn = 
 build_metadata.AdditionalFiles.EnableDiagnostics = 

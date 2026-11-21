@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Dashboard.ProcessOutputCard"
+    x:Name="Root">
+
+    <VerticalStackLayout
+        Spacing="7"
+        Margin="0,0,0,14">
+
+        <Grid
+            ColumnDefinitions="*,Auto">
+
+            <Label
+                Text="{Binding ProcessName,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoBold"
+                FontSize="12"
+                TextColor="{StaticResource TextPrimary}" />
+
+            <Label
+                Grid.Column="1"
+                Text="{Binding PalletCount,
+                    Source={x:Reference Root},
+                    StringFormat='{0} pallets'}"
+                FontFamily="LatoRegular"
+                FontSize="12"
+                TextColor="{StaticResource TextSecondary}" />
+
+        </Grid>
+
+        <ProgressBar
+            Progress="{Binding Percentage,
+                Source={x:Reference Root}}"
+            ProgressColor="{StaticResource Primary}"
+            BackgroundColor="{StaticResource PrimaryLight}"
+            HeightRequest="6" />
+
+    </VerticalStackLayout>
+
+</ContentView>

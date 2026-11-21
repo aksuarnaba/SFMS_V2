@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:layout="clr-namespace:SFMS.MAUI.Components.Layout"
+    x:Class="SFMS.MAUI.Views.Layout.MainPage"
+    BackgroundColor="{StaticResource PrimaryPressed}"
+    Shell.NavBarIsVisible="False">
+
+    <Grid ColumnDefinitions="238,*">
+
+        <!-- ====================================== -->
+        <!-- SIDEBAR                                -->
+        <!-- ====================================== -->
+
+        <layout:AppSidebar
+            x:Name="Sidebar"
+            Grid.Column="0"
+            SelectedRoute="Dashboard"
+            NavigationRequested="OnNavigationRequested"
+            LogoutRequested="OnLogoutRequested" />
+
+
+        <!-- ====================================== -->
+        <!-- MAIN APPLICATION SURFACE               -->
+        <!-- ====================================== -->
+
+        <Border
+            x:Name="MainSurface"
+            Grid.Column="1"
+            Margin="0,12,12,12"
+            BackgroundColor="{StaticResource AppBackground}"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 24">
+
+            <Grid
+                RowDefinitions="68,*">
+
+                <!-- ============================== -->
+                <!-- TOP BAR                        -->
+                <!-- ============================== -->
+
+                <layout:AppTopBar
+                    x:Name="TopBar"
+                    Grid.Row="0"
+                    PageTitle="SFMS Production Operations"
+                    SiteDescription="PI-SP · Printwell, Inc."
+                    UserName="System Administrator"
+                    UserRole="Super Admin"
+                    UserInitials="SA" />
+
+
+                <!-- ============================== -->
+                <!-- FEATURE CONTENT                -->
+                <!-- ============================== -->
+
+                <ContentView
+                    x:Name="MainContent"
+                    Grid.Row="1"
+                    BackgroundColor="{StaticResource AppBackground}" />
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>

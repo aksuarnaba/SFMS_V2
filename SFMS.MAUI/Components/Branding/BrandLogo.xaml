@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Branding.BrandLogo"
+    x:Name="Root">
+
+    <HorizontalStackLayout
+        x:Name="LogoContainer"
+        Spacing="16"
+        VerticalOptions="Center">
+
+        <!-- ============================== -->
+        <!-- PALLET LAYERS MARK             -->
+        <!-- ============================== -->
+
+        <Grid
+            x:Name="LogoMark"
+            WidthRequest="66"
+            HeightRequest="66"
+            VerticalOptions="Center">
+
+            <!-- Top Layer -->
+
+            <Border
+                x:Name="TopLayer"
+                WidthRequest="46"
+                HeightRequest="13"
+                TranslationY="-17"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="{StaticResource Primary}"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 4" />
+
+            <!-- Middle Layer -->
+
+            <Border
+                x:Name="MiddleLayer"
+                WidthRequest="40"
+                HeightRequest="12"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="#7892EA"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 4" />
+
+            <!-- Bottom pallet -->
+
+            <Border
+                x:Name="BottomLayer"
+                WidthRequest="46"
+                HeightRequest="12"
+                TranslationY="17"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="White"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 4" />
+
+            <!-- Pallet supports -->
+
+            <Border
+                x:Name="LeftFoot"
+                WidthRequest="9"
+                HeightRequest="7"
+                TranslationX="-15"
+                TranslationY="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="White"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 2" />
+
+            <Border
+                x:Name="RightFoot"
+                WidthRequest="9"
+                HeightRequest="7"
+                TranslationX="15"
+                TranslationY="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="White"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 2" />
+
+        </Grid>
+
+        <!-- ============================== -->
+        <!-- WORDMARK                       -->
+        <!-- ============================== -->
+
+        <VerticalStackLayout
+            x:Name="BrandText"
+            Spacing="1"
+            VerticalOptions="Center">
+
+            <Label
+                x:Name="Wordmark"
+                Text="SFMS"
+                FontFamily="InterExtraBold"
+                FontSize="36"
+                CharacterSpacing="0.5"
+                LineHeight="1"
+                TextColor="White" />
+
+            <Label
+                x:Name="Subtitle"
+                Text="SHOPFLOOR MANAGEMENT SYSTEM"
+                FontFamily="InterSemiBold"
+                FontSize="9"
+                CharacterSpacing="1.05"
+                TextColor="#EDF3FF" />
+
+        </VerticalStackLayout>
+
+    </HorizontalStackLayout>
+
+</ContentView>

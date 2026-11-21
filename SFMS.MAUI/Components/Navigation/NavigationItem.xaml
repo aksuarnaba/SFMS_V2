@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Navigation.NavigationItem"
+    x:Name="Root">
+
+    <Border
+        x:Name="Container"
+        HeightRequest="48"
+        Padding="12,0"
+        BackgroundColor="Transparent"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 10">
+
+        <Border.GestureRecognizers>
+
+            <TapGestureRecognizer
+                Tapped="OnTapped" />
+
+        </Border.GestureRecognizers>
+
+
+        <Grid
+            ColumnDefinitions="32,*"
+            ColumnSpacing="10">
+
+            <!-- Icon -->
+
+            <Border
+                x:Name="IconContainer"
+                Grid.Column="0"
+                WidthRequest="28"
+                HeightRequest="28"
+                VerticalOptions="Center"
+                BackgroundColor="Transparent"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 7">
+
+                <Label
+                    x:Name="IconLabel"
+                    Text="{Binding Icon,
+                        Source={x:Reference Root}}"
+                    FontFamily="LatoBold"
+                    FontSize="12"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="{StaticResource SidebarText}" />
+
+            </Border>
+
+
+            <!-- Navigation title -->
+
+            <Label
+                x:Name="TitleLabel"
+                Grid.Column="1"
+                Text="{Binding Title,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoRegular"
+                FontSize="13"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center"
+                TextColor="{StaticResource SidebarText}" />
+
+        </Grid>
+
+    </Border>
+
+</ContentView>

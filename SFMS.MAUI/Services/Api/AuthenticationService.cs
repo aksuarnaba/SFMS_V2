@@ -1,60 +1,98 @@
 ﻿using SFMS.MAUI.Models.Authentication;
-using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http.Json;
-using System.Text;
+using System.Text.Json;
 
-namespace SFMS.MAUI.Services.Api
+namespace SFMS.MAUI.Services.Api;
+
+public sealed class AuthenticationService(
+    HttpClient httpClient)
 {
-    public sealed class AuthenticationService
+    private readonly HttpClient _httpClient = httpClient;
+
+    private static readonly JsonSerializerOptions JsonOptions =
+        new(JsonSerializerDefaults.Web)
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+    public async Task<LoginResponse?> LoginAsync(
+        LoginRequest request,
+        CancellationToken cancellationToken = default)
     {
-        private readonly HttpClient _httpClient;
+        using var response =
+            await _httpClient.PostAsJsonAsync(
+                "api/auth/login",
+                request,
+                JsonOptions,
+                cancellationToken);
 
-        public AuthenticationService(HttpClient httpClient)
+        if (response.StatusCode ==
+            HttpStatusCode.Unauthorized)
         {
-            _httpClient = httpClient;
+            return null;
         }
 
-        public async Task<LoginResponse?> LoginAsync(
-            LoginRequest request,
-            CancellationToken ct = default)
+        var responseBody =
+            await response.Content.ReadAsStringAsync(
+                cancellationToken);
+
+        System.Diagnostics.Debug.WriteLine(
+            $"SFMS LOGIN STATUS: {(int)response.StatusCode}");
+
+        System.Diagnostics.Debug.WriteLine(
+            $"SFMS LOGIN RESPONSE: {responseBody}");
+
+        if (!response.IsSuccessStatusCode)
         {
-            using var response = await _httpClient.PostAsJsonAsync(
-                "api/auth/login", request, ct);
-
-            if(response.StatusCode == HttpStatusCode.Unauthorized)
-            {
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-
-            return await response.Content.ReadFromJsonAsync<LoginResponse>(
-                cancellationToken: ct);
-
+            throw new HttpRequestException(
+                $"SFMS API returned " +
+                $"{(int)response.StatusCode} " +
+                $"{response.ReasonPhrase}. " +
+                $"Response: {responseBody}");
         }
 
-        public async Task<bool> CheckServerAsync(
-            CancellationToken cancellationToken = default)
+        try
         {
-            try
-            {
-                using var response = await _httpClient.GetAsync(
+            var result =
+                JsonSerializer.Deserialize<LoginResponse>(
+                    responseBody,
+                    JsonOptions);
+
+            return result is null
+                ? throw new InvalidOperationException(
+                    "SFMS API returned an empty login response.")
+                : result;
+        }
+        catch (JsonException exception)
+        {
+            throw new InvalidOperationException(
+                "SFMS API login succeeded, but the response " +
+                "could not be converted to LoginResponse. " +
+                $"Response: {responseBody}",
+                exception);
+        }
+    }
+
+    public async Task<bool> CheckServerAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response =
+                await _httpClient.GetAsync(
                     "health",
                     cancellationToken);
 
-                return response.IsSuccessStatusCode;
-            }
-            catch (HttpRequestException)
-            {
-                return false;
-            }
-            catch (TaskCanceledException)
-            {
-                return false;
-            }
+            return response.IsSuccessStatusCode;
         }
-
+        catch (HttpRequestException)
+        {
+            return false;
+        }
+        catch (TaskCanceledException)
+        {
+            return false;
+        }
     }
 }

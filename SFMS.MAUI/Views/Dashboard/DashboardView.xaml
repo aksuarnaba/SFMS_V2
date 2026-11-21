@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Views.Dashboard.DashboardView"
+    xmlns:dashboardComponents="clr-namespace:SFMS.MAUI.Components.Dashboard" >
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="28"
+            Spacing="24">
+
+            <Grid ColumnDefinitions="*,Auto">
+
+                <VerticalStackLayout Spacing="3">
+
+                    <Label
+            Text="Dashboard"
+            FontFamily="LatoBlack"
+            FontSize="28"
+            TextColor="{StaticResource TextPrimary}" />
+
+                    <Label
+            Text="Production overview and shopfloor activity"
+            FontFamily="LatoRegular"
+            FontSize="14"
+            TextColor="{StaticResource TextSecondary}" />
+
+                </VerticalStackLayout>
+
+
+                <HorizontalStackLayout
+        Grid.Column="1"
+        VerticalOptions="Center"
+        Spacing="9">
+
+                    <Border
+            WidthRequest="8"
+            HeightRequest="8"
+            BackgroundColor="{StaticResource Success}"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 4" />
+
+                    <VerticalStackLayout
+            VerticalOptions="Center"
+            Spacing="0">
+
+                        <Label
+                Text="Live"
+                FontFamily="LatoBold"
+                FontSize="11"
+                TextColor="{StaticResource Success}" />
+
+                        <Label
+                Text="{Binding LastUpdatedAt,
+                    StringFormat='Updated {0:HH:mm:ss}'}"
+                FontFamily="LatoRegular"
+                FontSize="10"
+                TextColor="{StaticResource TextMuted}" />
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+            </Grid>
+
+            <!-- KPI CARDS -->
+
+                <Grid
+                    ColumnDefinitions="*,*,*,*"
+                    ColumnSpacing="16">
+
+                        <dashboardComponents:KpiCard
+                Grid.Column="0"
+                Title="JOBS BY MACHINE TODAY"
+                Value="{Binding Summary.ProcessJobByMachineToday}"
+                Description="Machine-level processing"
+                ValueColor="{StaticResource TextPrimary}" />
+
+                        <dashboardComponents:KpiCard
+                Grid.Column="1"
+                Title="JOBS BY MACHINE THIS WEEK"
+                Value="{Binding Summary.ProcessJobByMachineThisWeek}"
+                Description="Current production week"
+                ValueColor="{StaticResource Primary}" />
+
+                        <dashboardComponents:KpiCard
+                Grid.Column="2"
+                Title="JOBS BY SECTION TODAY"
+                Value="{Binding Summary.ProcessJobBySectionToday}"
+                Description="Section-level processing"
+                ValueColor="{StaticResource Success}" />
+
+                        <dashboardComponents:KpiCard
+                Grid.Column="3"
+                Title="QUANTITY PROCESSED TODAY"
+                Value="{Binding Summary.TotalQtyProcessedToday,
+                    StringFormat='{0:N0}'}"
+                Description="Total pallet quantity"
+                ValueColor="{StaticResource Warning}" />
+
+            </Grid>
+
+
+            <!-- LOWER CONTENT -->
+
+            <Grid
+                ColumnDefinitions="0.85*,1.15*"
+                ColumnSpacing="18">
+
+                <Border
+                    Padding="22"
+                    BackgroundColor="White"
+                    Stroke="{StaticResource Border}"
+                    StrokeShape="RoundRectangle 12">
+
+                    <VerticalStackLayout Spacing="18">
+
+                        <Label
+                            Text="Production by Process"
+                            FontFamily="LatoBold"
+                            FontSize="17"
+                            TextColor="{StaticResource TextPrimary}" />
+
+                        <CollectionView
+                            ItemsSource="{Binding ProcessOutputs}"
+                            SelectionMode="None"
+                            HeightRequest="270"
+                            VerticalScrollBarVisibility="Never">
+
+                            <CollectionView.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <dashboardComponents:ProcessOutputCard
+                                        ProcessName="{Binding ProcessName}"
+                                        PalletCount="{Binding PalletCount}"
+                                        Percentage="{Binding Percentage}" />
+
+                                </DataTemplate>
+
+                            </CollectionView.ItemTemplate>
+
+                        </CollectionView>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+                <Border
+                    Grid.Column="1"
+                    Padding="22"
+                    BackgroundColor="White"
+                    Stroke="{StaticResource Border}"
+                    StrokeShape="RoundRectangle 12">
+
+                    <VerticalStackLayout Spacing="18">
+
+                        <Grid ColumnDefinitions="*,Auto">
+
+                            <Label
+                                Text="Recent Pallet Activity"
+                                FontFamily="LatoBold"
+                                FontSize="17" />
+
+                            <Label
+                                Grid.Column="1"
+                                Text="View all"
+                                FontFamily="LatoBold"
+                                FontSize="12"
+                                TextColor="{StaticResource Primary}" />
+
+                        </Grid>
+
+                        <CollectionView
+                            ItemsSource="{Binding RecentPallets}"
+                            SelectionMode="None"
+                            HeightRequest="330"
+                            VerticalScrollBarVisibility="Never">
+
+                            <CollectionView.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <dashboardComponents:RecentPalletCard
+                                        Machine="{Binding Machine}"
+                                        JobNumber="{Binding JobNumber}"
+                                        Suffix="{Binding Suffix}"
+                                        OperationNumber="{Binding OperationNumber}"
+                                        JobName="{Binding JobName}"
+                                        Quantity="{Binding Quantity}"
+                                        Status="{Binding Status}"
+                                        CreatedAt="{Binding CreatedAt}" />
+
+                                </DataTemplate>
+
+                            </CollectionView.ItemTemplate>
+
+                        </CollectionView>
+
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </Grid>
+
+            <!-- ====================================== -->
+            <!-- TODAY'S GENERATED ACTIVITY             -->
+            <!-- ====================================== -->
+
+            <Grid
+    ColumnDefinitions="*,*"
+    ColumnSpacing="18">
+
+                <!-- Generated Pallets -->
+
+                <Border
+        Grid.Column="0"
+        Padding="22"
+        BackgroundColor="{StaticResource Primary}"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 12">
+
+                    <Grid
+            ColumnDefinitions="*,Auto">
+
+                        <VerticalStackLayout
+                Spacing="5">
+
+                            <Label
+                    Text="GENERATED PALLETS TODAY"
+                    FontFamily="LatoBold"
+                    FontSize="10"
+                    CharacterSpacing="0.9"
+                    TextColor="#DDE5FF" />
+
+                            <Label
+                    Text="{Binding Summary.GeneratedPalletsToday}"
+                    FontFamily="LatoBlack"
+                    FontSize="30"
+                    TextColor="White" />
+
+                            <Label
+                    Text="Pallet tags generated today"
+                    FontFamily="LatoRegular"
+                    FontSize="11"
+                    TextColor="#DDE5FF" />
+
+                        </VerticalStackLayout>
+
+
+                        <Border
+                Grid.Column="1"
+                WidthRequest="48"
+                HeightRequest="48"
+                VerticalOptions="Center"
+                BackgroundColor="#22FFFFFF"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12">
+
+                            <Label
+                    Text="P"
+                    FontFamily="LatoBold"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White" />
+
+                        </Border>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- Generated Checklists -->
+
+                <Border
+        Grid.Column="1"
+        Padding="22"
+        BackgroundColor="{StaticResource BrandNavy}"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 12">
+
+                    <Grid
+            ColumnDefinitions="*,Auto">
+
+                        <VerticalStackLayout
+                Spacing="5">
+
+                            <Label
+                    Text="GENERATED CHECKLISTS TODAY"
+                    FontFamily="LatoBold"
+                    FontSize="10"
+                    CharacterSpacing="0.9"
+                    TextColor="#CFDAEB" />
+
+                            <Label
+                    Text="{Binding Summary.GeneratedChecklistToday}"
+                    FontFamily="LatoBlack"
+                    FontSize="30"
+                    TextColor="White" />
+
+                            <Label
+                    Text="Monitoring checklists generated"
+                    FontFamily="LatoRegular"
+                    FontSize="11"
+                    TextColor="#CFDAEB" />
+
+                        </VerticalStackLayout>
+
+
+                        <Border
+                Grid.Column="1"
+                WidthRequest="48"
+                HeightRequest="48"
+                VerticalOptions="Center"
+                BackgroundColor="#22FFFFFF"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12">
+
+                            <Label
+                    Text="C"
+                    FontFamily="LatoBold"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White" />
+
+                        </Border>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentView>

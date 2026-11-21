@@ -1,3 +1,0 @@
-C:\Project\01. PRIME\SFMS\publish\SFMS.Domain.dll
-C:\Project\01. PRIME\SFMS\publish\SFMS.Domain.deps.json
-C:\Project\01. PRIME\SFMS\publish\SFMS.Domain.pdb

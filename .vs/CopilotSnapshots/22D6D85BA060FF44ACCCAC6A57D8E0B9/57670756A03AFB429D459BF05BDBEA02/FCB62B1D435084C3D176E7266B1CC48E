@@ -1,0 +1,27 @@
+﻿using AndroidX.Lifecycle;
+using SFMS.MAUI.ViewModels.Dashboard;
+
+namespace SFMS.MAUI.Views.Dashboard;
+
+public partial class DashboardView : ContentView
+{
+    private readonly DashboardViewModel _viewModel;
+
+    public DashboardView(DashboardViewModel viewModel)
+	{
+        InitializeComponent();
+
+        _viewModel = viewModel;
+
+        BindingContext = _viewModel;
+
+        Loaded += OnLoaded;
+    }
+
+    private async void OnLoaded(
+        object? sender,
+        EventArgs eventArgs)
+    {
+        await _viewModel.LoadWhenRequiredAsync();
+    }
+}

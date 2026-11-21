@@ -14,6 +14,14 @@
                 <ResourceDictionary
                     Source="Resources/Styles/Colors.xaml" />
 
+                <!-- 3. Your SFMS custom typography -->
+                <ResourceDictionary
+                    Source="Resources/Styles/Typography.xaml" />
+
+                <!-- 3. Your SFMS custom components -->
+                <!--<ResourceDictionary
+                    Source="Resources/Styles/Components.xaml" />-->
+
                 <!-- 3. Your SFMS custom styles -->
                 <ResourceDictionary
                     Source="Resources/Styles/Styles.xaml" />

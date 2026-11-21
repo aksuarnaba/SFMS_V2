@@ -3,51 +3,40 @@
   "WorkspaceRootPath": "C:\\Project\\01. PRIME\\SFMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\models\\authentication\\siteoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\models\\authentication\\siteoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\layout\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\layout\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\viewmodels\\authentication\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\viewmodels\\authentication\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\authentication\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\authentication\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\authentication\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\authentication\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\persistence\\seeders\\sfmsdbcontextseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\persistence\\seeders\\sfmsdbcontextseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|c:\\project\\01. prime\\sfms\\sfms.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6010268-38FD-0E5C-7A1B-26B218E554C6}|SFMS.Infrastructure\\SFMS.Infrastructure.csproj|solutionrelative:sfms.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\components\\navigation\\navigationitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\components\\navigation\\navigationitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\dashboard\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\dashboard\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|c:\\project\\01. prime\\sfms\\sfms.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4829D77E-F033-AF80-27BF-BDDB45CA60EF}|SFMS.Api\\SFMS.Api.csproj|solutionrelative:sfms.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\layout\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\layout\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\components\\layout\\appsidebar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\components\\layout\\appsidebar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\components\\layout\\apptopbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\components\\layout\\apptopbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|c:\\project\\01. prime\\sfms\\sfms.maui\\views\\dashboard\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3F35319-9DE6-47A6-9448-63D726899BC3}|SFMS.MAUI\\SFMS.MAUI.csproj|solutionrelative:sfms.maui\\views\\dashboard\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,159 +70,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SiteOption.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Models\\Authentication\\SiteOption.cs",
-              "RelativeDocumentMoniker": "SFMS.MAUI\\Models\\Authentication\\SiteOption.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Models\\Authentication\\SiteOption.cs",
-              "RelativeToolTip": "SFMS.MAUI\\Models\\Authentication\\SiteOption.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T06:06:46.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\ViewModels\\Authentication\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "SFMS.MAUI\\ViewModels\\Authentication\\LoginViewModel.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\ViewModels\\Authentication\\LoginViewModel.cs",
-              "RelativeToolTip": "SFMS.MAUI\\ViewModels\\Authentication\\LoginViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAApwBYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T05:39:58.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml.cs",
-              "RelativeToolTip": "SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T05:59:19.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml",
-              "RelativeToolTip": "SFMS.MAUI\\Views\\Authentication\\LoginPage.xaml",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAgwKgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-18T05:31:14.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
-              "ToolTip": "C:\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\Users\\aron.suarnaba\\AppData\\Roaming\\Microsoft\\UserSecrets\\5c05b0ab-613f-4064-be9b-37a94413e72e\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-18T05:39:48.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Program.cs",
-              "RelativeDocumentMoniker": "SFMS.Api\\Program.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Program.cs",
-              "RelativeToolTip": "SFMS.Api\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T05:39:30.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "SFMS.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "SFMS.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T05:38:50.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SFMSDbContextSeeder.cs",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
-              "RelativeDocumentMoniker": "SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
-              "RelativeToolTip": "SFMS.Infrastructure\\Persistence\\Seeders\\SFMSDbContextSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T05:36:55.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "SFMS.MAUI\\Resources\\Styles\\Styles.xaml",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "SFMS.MAUI\\Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-18T05:31:02.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Colors.xaml",
               "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Resources\\Styles\\Colors.xaml",
               "RelativeDocumentMoniker": "SFMS.MAUI\\Resources\\Styles\\Colors.xaml",
               "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Resources\\Styles\\Colors.xaml",
               "RelativeToolTip": "SFMS.MAUI\\Resources\\Styles\\Colors.xaml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC8AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-18T05:30:54.29Z",
+              "WhenOpened": "2026-11-21T09:12:26.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "SFMS.Api\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "SFMS.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-18T05:27:52.111Z",
+              "DocumentIndex": 1,
+              "Title": "NavigationItem.xaml",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Navigation\\NavigationItem.xaml",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Components\\Navigation\\NavigationItem.xaml",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Navigation\\NavigationItem.xaml",
+              "RelativeToolTip": "SFMS.MAUI\\Components\\Navigation\\NavigationItem.xaml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwDwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-21T09:12:18.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Layout\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Layout\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Layout\\MainPage.xaml.cs",
+              "RelativeToolTip": "SFMS.MAUI\\Views\\Layout\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAnwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T09:05:19.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\MauiProgram.cs",
               "RelativeDocumentMoniker": "SFMS.MAUI\\MauiProgram.cs",
               "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\MauiProgram.cs",
               "RelativeToolTip": "SFMS.MAUI\\MauiProgram.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAYwEIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAgwIAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T09:56:12.79Z",
+              "WhenOpened": "2026-11-21T09:05:48.511Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml",
+              "RelativeToolTip": "SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml",
+              "ViewState": "AgIAALMAAAAAAAAAAAAqwMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-21T03:08:55.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppTopBar.xaml",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Layout\\AppTopBar.xaml",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Components\\Layout\\AppTopBar.xaml",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Layout\\AppTopBar.xaml",
+              "RelativeToolTip": "SFMS.MAUI\\Components\\Layout\\AppTopBar.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-21T03:05:26.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppSidebar.xaml",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Layout\\AppSidebar.xaml",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Components\\Layout\\AppSidebar.xaml",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Components\\Layout\\AppSidebar.xaml",
+              "RelativeToolTip": "SFMS.MAUI\\Components\\Layout\\AppSidebar.xaml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-20T05:55:32.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Layout\\MainPage.xaml",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Layout\\MainPage.xaml",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Layout\\MainPage.xaml",
+              "RelativeToolTip": "SFMS.MAUI\\Views\\Layout\\MainPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-21T03:04:44.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardView.xaml.cs",
+              "DocumentMoniker": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml.cs",
+              "RelativeDocumentMoniker": "SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml.cs",
+              "ToolTip": "C:\\Project\\01. PRIME\\SFMS\\SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml.cs",
+              "RelativeToolTip": "SFMS.MAUI\\Views\\Dashboard\\DashboardView.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T03:15:48.468Z"
             }
           ]
         }

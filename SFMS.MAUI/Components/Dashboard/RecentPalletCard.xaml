@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Dashboard.RecentPalletCard"
+    x:Name="Root">
+
+    <Border
+        Padding="13"
+        Margin="0,0,0,8"
+        BackgroundColor="{StaticResource SurfaceMuted}"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 9">
+
+        <Grid
+            RowDefinitions="Auto,Auto,Auto"
+            ColumnDefinitions="1.2*,1*,Auto"
+            ColumnSpacing="12"
+            RowSpacing="5">
+
+            <!-- Job -->
+
+            <Label
+                Grid.Row="0"
+                Text="{Binding JobNumber,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoBold"
+                FontSize="13"
+                TextColor="{StaticResource TextPrimary}" />
+
+            <!-- Machine -->
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="{Binding Machine,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoRegular"
+                FontSize="12"
+                TextColor="{StaticResource TextSecondary}" />
+
+            <!-- Time -->
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="{Binding CreatedAt,
+                    Source={x:Reference Root},
+                    StringFormat='{0:HH:mm}'}"
+                FontFamily="LatoBold"
+                FontSize="11"
+                TextColor="{StaticResource Primary}" />
+
+
+            <!-- Operation -->
+
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Spacing="5">
+
+                <Label
+                    Text="{Binding OperationNumber,
+                        Source={x:Reference Root},
+                        StringFormat='Op {0}'}"
+                    FontSize="11"
+                    TextColor="{StaticResource TextMuted}" />
+
+                <Label
+                    Text="·"
+                    FontSize="11"
+                    TextColor="{StaticResource TextMuted}" />
+
+                <Label
+                    Text="{Binding Suffix,
+                        Source={x:Reference Root},
+                        StringFormat='Suf {0}'}"
+                    FontSize="11"
+                    TextColor="{StaticResource TextMuted}" />
+
+            </HorizontalStackLayout>
+
+            <!-- Quantity -->
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="{Binding Quantity,
+                    Source={x:Reference Root},
+                    StringFormat='Qty: {0:N0}'}"
+                FontSize="11"
+                TextColor="{StaticResource TextMuted}" />
+
+            <!-- Status -->
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="{Binding Status,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoBold"
+                FontSize="10"
+                TextColor="{StaticResource Warning}" />
+
+
+            <!-- Job name -->
+
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Text="{Binding JobName,
+                    Source={x:Reference Root}}"
+                FontFamily="LatoRegular"
+                FontSize="11"
+                LineBreakMode="TailTruncation"
+                TextColor="{StaticResource TextSecondary}" />
+
+        </Grid>
+
+    </Border>
+
+</ContentView>

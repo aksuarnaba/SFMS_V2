@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SFMS.MAUI.Components.Dashboard.KpiCard"
+    x:Name="Root">
+
+    <Border
+        Padding="20"
+        BackgroundColor="{StaticResource Surface}"
+        Stroke="{StaticResource Border}"
+        StrokeThickness="1"
+        StrokeShape="RoundRectangle 12">
+
+        <Grid
+            RowDefinitions="Auto,Auto,Auto"
+            RowSpacing="8">
+
+            <Label
+                Grid.Row="0"
+                Text="{Binding Title, Source={x:Reference Root}}"
+                FontFamily="LatoBold"
+                FontSize="10"
+                CharacterSpacing="0.9"
+                TextColor="{StaticResource TextSecondary}" />
+
+            <Label
+                Grid.Row="1"
+                Text="{Binding Value, Source={x:Reference Root}}"
+                FontFamily="LatoBlack"
+                FontSize="30"
+                TextColor="{Binding ValueColor, Source={x:Reference Root}}" />
+
+            <Label
+                Grid.Row="2"
+                Text="{Binding Description, Source={x:Reference Root}}"
+                FontFamily="LatoRegular"
+                FontSize="11"
+                TextColor="{StaticResource TextMuted}" />
+
+        </Grid>
+
+    </Border>
+
+</ContentView>
